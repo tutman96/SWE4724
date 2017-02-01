@@ -4,9 +4,10 @@
   "description": "SEW4724 Capstone Project of a doctor's office appointment system",
   "main": "bin/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "./node_modules/.bin/tsc -p .",
-    "update": "npm install && ./node_modules/.bin/bower install"
+    "update": "npm install && ./node_modules/.bin/bower install",
+    "start_prod": "./node_modules/.bin/pm2 start run.json --env production",
+    "restart_prod": "./node_modules/.bin/pm2 restart run.json"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,8 @@
     "serve-static": "^1.11.2"
   },
   "devDependencies": {
+    "bower": "^1.8.0",
+    "pm2": "^2.3.0",
     "typescript": "^2.1.5"
   }
 }

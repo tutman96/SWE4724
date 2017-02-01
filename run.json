@@ -3,12 +3,7 @@
     {
       "name": "amoms",
       "script": "./bin/app.js",
-      "watch": [
-        "bin/*"
-      ],
-      "env": {
-        "NODE_ENV": "development"
-      },
+      "watch": false,
       "env_production": {
         "NODE_ENV": "production"
       }
