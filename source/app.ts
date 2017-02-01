@@ -5,20 +5,25 @@ import ejs = require('ejs');
 import serveStatic = require('serve-static');
 var minifyHTML = require('express-minify-html');
 
+morgan.token('remote-addr', (req, res) => {
+	var ffHeaderValue = req.headers['x-forwarded-for'];
+	return ffHeaderValue || req.connection.remoteAddress;
+});
+
 var app = express();
 app.set('view engine', 'ejs');
 app.use(morgan('combined'));
 app.use(minifyHTML({
-    override:      true,
-    exception_url: false,
-    htmlMinifier: {
-        removeComments:            true,
-        collapseWhitespace:        true,
-        collapseBooleanAttributes: true,
-        removeAttributeQuotes:     true,
-        removeEmptyAttributes:     true,
-        minifyJS:                  true
-    }
+	override: true,
+	exception_url: false,
+	htmlMinifier: {
+		removeComments: true,
+		collapseWhitespace: true,
+		collapseBooleanAttributes: true,
+		removeAttributeQuotes: true,
+		removeEmptyAttributes: true,
+		minifyJS: true
+	}
 }));
 
 app.get('/', (req, res) => {
