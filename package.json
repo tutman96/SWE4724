@@ -7,7 +7,8 @@
     "build": "./node_modules/.bin/tsc -p .",
     "update": "npm install && ./node_modules/.bin/bower install",
     "start_prod": "./node_modules/.bin/pm2 start run.json --env production",
-    "restart_prod": "./node_modules/.bin/pm2 restart run.json"
+    "restart_prod": "./node_modules/.bin/pm2 restart run.json",
+    "start": "node ./bin/app.js"
   },
   "repository": {
     "type": "git",

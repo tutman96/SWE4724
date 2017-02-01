@@ -35,4 +35,6 @@ app.get('/', (req, res) => {
 app.use(serveStatic('.', {
 	maxAge: (process.env.NODE_ENV == 'production' ? 1000 * 60 * 60 * 24 : 0)
 }))
-app.listen(8080);
+app.listen(8080, () => {
+	console.log("The app is now running on port 8080")
+});
