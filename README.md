@@ -17,4 +17,4 @@ The objective of the AMOMS project is to develop an application that will run on
 - After making modifications to the TypeScript, you have to transpile it to Javascript. To do this, press `Cmd + Shift + B` (on MacOS) or `Ctrl + Shift + B` (on Windows/Linux)
 - You can run the code in the integrated debugger by pressing `F5`. After you transpile the TypeScript, you must restart the application
 - Once your changes are made, push them to the `develop` branch and open a Pull Request to merge them into the `master` branch
-- The code will (eventually) auto-deploy on a successful merge into `master`
+- The code will auto-deploy on a successful merge into `master`
