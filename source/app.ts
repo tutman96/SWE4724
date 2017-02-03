@@ -35,6 +35,7 @@ var a = [Patient, Employee, Appointment, ShiftSchedule];
 
 //setup
 (async () => {
+	await database.authenticate();
 	await database.sync();
 
 
