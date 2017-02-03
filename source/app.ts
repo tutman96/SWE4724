@@ -26,15 +26,33 @@ app.use(minifyHTML({
 	}
 }));
 
-app.get('/', (req, res) => {
+import database = require('./database');
+import Patient = require('./model/Patient');
+import Appointment = require('./model/Appointment');
+import Employee = require('./model/Employee');
+import ShiftSchedule = require('./model/ShiftSchedule');
+var a = [Patient, Employee, Appointment, ShiftSchedule];
+
+//setup
+(async () => {
+	await database.sync();
+
+
+})().then(() => {
+	app.listen(8080, () => {
+		console.log("The app is now running on port 8080")
+	});
+}).catch((e) => {
+	console.error(e);
+})
+
+app.get('/', async (req, res) => {
 	res.render('login', {
-		title: "Login"
+		title: "Login",
+		user: await Employee.Employee.findOne({ where: { id: 1 } })
 	});
 })
 
 app.use(serveStatic('.', {
 	maxAge: (process.env.NODE_ENV == 'production' ? 1000 * 60 * 60 * 24 : 0)
 }))
-app.listen(8080, () => {
-	console.log("The app is now running on port 8080")
-});
