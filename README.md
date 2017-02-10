@@ -1,4 +1,4 @@
-# SWE4713 - Capstone Project
+# SWE4724 - Capstone Project
 ## AMOMS Alternative Medicine Office Management System - [https://amoms.tuttle.tech](https://amoms.tuttle.tech)
 The objective of the AMOMS project is to develop an application that will run on the offic's intranet and will assist the employees of the medical group with management of all processes related to patients.
 
