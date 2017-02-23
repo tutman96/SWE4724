@@ -2,18 +2,9 @@
 	<li class="sidebar-brand">
 		AMOMS
 	</li>
-	<li <%- (path.indexOf("/account") == 0 ? 'class="active"' : "")%>>
-		<a href="/accounts">Accounts</a>
-	</li>
-	<li class="parent">
-		<a>Journals</a>
-		<ul>
-			<li <%- (path.indexOf("/journal/current") == 0 ? 'class="active"' : "")%>>
-				<a href="/journal/current">Current Journal</a>
-			</li>
-			<li <%- ((path.indexOf("/journal") == 0 && path.indexOf("current") == -1) ? 'class="active"' : "")%>>
-				<a href="/journals">Closed Journals</a>
-			</li>
-		</ul>
-	</li>
+	<% if (user.accessLevel == "Administrator") { %>
+		<li <%- (path.indexOf("/employees") == 0 ? 'class="active"' : "")%>>
+			<a href="/employees">Employees</a>
+		</li>
+	<% } %>
 </ul>

@@ -1,0 +1,68 @@
+<%- include('partials/header') %>
+	<div class="row">
+		<div class="col-xs-6">
+			<span class="title"><%= title %></span>
+		</div>
+		<div class="col-xs-6 text-right">
+			<a class="btn btn-primary" href="/employee/new">New Employee</a>
+		</div>
+	</div>
+	<table class="table table-condensed table-hover table-striped">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Username</th>
+				<th>Access Level</th>
+				<th></th>
+			</tr>
+		</thead>
+		<% for (var employee of employees) { %>
+			<tr>
+				<td>
+					<%=employee.firstName%>
+						<%=employee.lastName%>
+				</td>
+				<td>
+					<%=employee.username%>
+				</td>
+				<td class="accessLevel">
+					<%=employee.accessLevel%>
+				</td>
+				<td>
+					<a href="/employee/<%-employee.id%>">Edit</a>
+				</td>
+			</tr>
+			<% } %>
+	</table>
+	<nav>
+		<ul class="pager">
+			<% if (page > 1) { %><li class="previous"><a href="/employees?page=<%=+page - 1%>">&larr; Previous Page</a></li><% } %>
+			<% if (page == 1) { %><li class="previous disabled"><a>&larr; Previous Page</a></li><% } %>
+			<li>Page <%=page%> of <%=totalPages%></li>
+			<% if (page < totalPages) { %><li class="next"><a href="/employees?page=<%=+page + 1%>">Next Page &rarr;</a></li><% } %>
+			<% if (page == totalPages) { %><li class="next disabled"><a>Next Page &rarr;</a></li><% } %>
+		</ul>
+	</nav>
+	<script>
+		$(".accessLevel").each(function (i, e) {
+			var origElem = $(e);
+			var text = origElem.text();
+			origElem.text("");
+			var elem = $('<div class="label"></div>');
+			elem.text(text);
+			switch (text) {
+				case "Administrator":
+					elem.addClass("label-warning")
+					break;
+				case "Receptionist":
+					elem.addClass("label-success")
+					break;
+				case "Practitioner":
+					elem.addClass("label-info")
+					break;
+			}
+			origElem.append(elem);
+		})
+	</script>
+
+	<%- include('partials/footer') %>

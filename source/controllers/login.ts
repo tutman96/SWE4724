@@ -13,6 +13,15 @@ function hash(username: string, password: string) {
 
 export = (app: helpers.app) => {
 	app.get('/login', helpers.wrap(async (req, res) => {
+		if (req.cookies['token']) {
+			try {
+				jwt.verify(req.cookies['token'], jwtSecret);
+				return res.status(302).location('/').end();
+			}
+			catch (e) {
+				return helpers.render(res, 'login');
+			}
+		}
 		return helpers.render(res, 'login');
 	}))
 
@@ -36,5 +45,10 @@ export = (app: helpers.app) => {
 			expires: new Date(Date.now() + 1000 * 60 * 60 * 24 * 7),
 			httpOnly: true
 		})
+	}))
+
+	app.get("/logout", helpers.wrap(async (req, res) => {
+		res.clearCookie('token');
+		res.status(302).location('/login').end();
 	}))
 }

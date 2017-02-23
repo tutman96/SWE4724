@@ -76,6 +76,7 @@ app.use((req: helpers.Request, res, next) => {
         if (!token) throw "No token"; 
         var decodedToken = jwt.verify(token, jwtSecret)
         req.token = decodedToken;
+        res.locals['user'] = decodedToken;
         next();
     }
     catch (e) {
@@ -87,6 +88,8 @@ app.use((req: helpers.Request, res, next) => {
 
 import login = require('./controllers/login');
 login(app);
+import employees = require('./controllers/employees');
+employees(app);
 
 import database = require('./database');
 import Patient = require('./model/Patient');

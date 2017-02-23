@@ -5,7 +5,7 @@ export interface Request extends express.Request {
 	token: {
 		id: number,
 		username: string,
-		accessLevel: Employee.AccessLevel,
+		accessLevel: Employee.AccessLevel
 		exp?: number
 	}
 }

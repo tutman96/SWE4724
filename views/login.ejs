@@ -36,6 +36,9 @@
 	</div>
 	
 	<script>
+		$("#username, #password").keydown(function (e) {
+			if (e.keyCode == 13) $("#login").click()
+		})
 		$("#login").click(function () {
 			$("#error").hide();
 			
@@ -60,7 +63,7 @@
 				contentType: "application/json",
 				dataType: "json",
 				success: function () {
-					
+					location.href = "/";
 				},
 				error: function (response) {
 					$("#error").text(response.responseText).show();
