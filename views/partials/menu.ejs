@@ -1,0 +1,14 @@
+<ul class="sidebar-nav">
+	<li class="sidebar-brand">
+		AMOMS
+	</li>
+	<% if (user.accessLevel == "Administrator") { %>
+		<li <%- (path.indexOf("/employee") == 0 ? 'class="active"' : "")%>>
+			<a href="/employees">Employees</a>
+		</li>
+	<% } %>
+	<hr>
+	<li>
+		<a href="/logout">Logout</a>
+	</li>
+</ul>
