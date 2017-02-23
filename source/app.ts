@@ -64,6 +64,8 @@ import helpers = require('./helpers');
 import { Employee } from './model/Employee';
 
 app.use((req: helpers.Request, res, next) => {
+    res.header('Content-Type', 'text/html');
+    
     var p = req.path.replace(/\//g, "");
     var title = (p && p.toLowerCase()) || "AMOMS";
     title = title[0].toUpperCase() + title.substr(1);
