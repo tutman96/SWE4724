@@ -4,11 +4,12 @@ import Database = require('../database');
 export type AccessLevel = 'Receptionist' | 'Practitioner' | 'Administrator'
 
 export interface EmployeeAttribute {
-	username: string;
-	firstName: string;
-	lastName: string;
-	passHash: string;
-	accessLevel: AccessLevel;
+	username?: string;
+	firstName?: string;
+	lastName?: string;
+	passHash?: string;
+	accessLevel?: AccessLevel;
+	disabled?: boolean;
 }
 
 export interface EmployeeInstance extends Sequelize.Instance<EmployeeAttribute>, EmployeeAttribute {
@@ -23,5 +24,6 @@ export var Employee = Database.define<EmployeeInstance, EmployeeAttribute>("Empl
 	firstName: { type: Sequelize.STRING },
 	lastName: { type: Sequelize.STRING },
 	passHash: { type: Sequelize.STRING },
-	accessLevel: { type: Sequelize.ENUM("Receptionist","Practitioner","Administrator") }
+	accessLevel: { type: Sequelize.STRING },
+	disabled: { type: Sequelize.BOOLEAN }
 })

@@ -7,11 +7,11 @@ var jwtSecret = fs.readFileSync('./secret.txt').toString();
 import { Employee } from '../model/Employee';
 
 import crypto = require('crypto');
-function hash(username: string, password: string) {
+export function hash(username: string, password: string) {
 	return crypto.createHash('sha256').update(username.toLowerCase() + password).digest('base64');
 }
 
-export = (app: helpers.app) => {
+export var init = (app: helpers.app) => {
 	app.get('/login', helpers.wrap(async (req, res) => {
 		if (req.cookies['token']) {
 			try {
@@ -33,6 +33,11 @@ export = (app: helpers.app) => {
 		if (!e) {
 			res.status(401);
 			return "Invalid username or password"
+		}
+		
+		if (e.disabled) {
+			res.status(418);
+			return "Your account has been disabled by your administrator."
 		}
 
 		var token: typeof req.token = {

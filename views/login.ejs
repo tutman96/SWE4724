@@ -36,6 +36,11 @@
 	</div>
 	
 	<script>
+		if (location.search.indexOf('?m=') == 0) {
+			var text = decodeURIComponent(location.search.substr(3));
+			$("#error").text(text).show();
+		}
+	
 		$("#username, #password").keydown(function (e) {
 			if (e.keyCode == 13) $("#login").click()
 		})

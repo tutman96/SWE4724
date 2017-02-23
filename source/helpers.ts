@@ -14,10 +14,9 @@ export type Response = express.Response;
 export type app = express.Application;
 
 export function wrap(handler: (req: Request, res: Response, next?: express.NextFunction) => Promise<any>) {
-	"use strict";
 	return function (req: Request, res: Response, next: express.NextFunction) {
 		try {
-			var p = handler.apply(undefined, [req, res]);
+			var p = handler.apply(undefined, [req, res, next]);
 		} catch (e) {
 			next(e);
 		}
@@ -43,6 +42,8 @@ export function wrap(handler: (req: Request, res: Response, next?: express.NextF
 }
 
 export function render(res: Response, template: string, data?: any) {
+	if (template == '404') res.status(404);
+	else if (template == '401') res.status(401);
 	return new Promise<string>((resolve, reject) => {
 		res.render(template, data, (err, html) => {
 			if (err) reject(err);

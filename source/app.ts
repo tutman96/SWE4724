@@ -60,24 +60,36 @@ app.use(serveStatic('.', {
 
 import jwt = require('jsonwebtoken');
 import helpers = require('./helpers');
+
+import { Employee } from './model/Employee';
+
 app.use((req: helpers.Request, res, next) => {
-    var p = req.path.replace(/\//g,"");
+    var p = req.path.replace(/\//g, "");
     var title = (p && p.toLowerCase()) || "AMOMS";
-	title = title[0].toUpperCase() + title.substr(1);
+    title = title[0].toUpperCase() + title.substr(1);
     res.locals = {
         title: title,
         path: req.path
     }
-    
+
     if (req.path == "/login") return next();
 
     try {
         var token = req.cookies && req.cookies['token'];
-        if (!token) throw "No token"; 
+        if (!token) throw "No token";
         var decodedToken = jwt.verify(token, jwtSecret)
         req.token = decodedToken;
         res.locals['user'] = decodedToken;
-        next();
+
+        Employee.findOne({ where: { disabled: false, id: req.token.id }, limit: 1 }).then((e) => {
+            if (!e) {
+                res.clearCookie('token');
+                return res.status(302).location('/login?m=' + encodeURIComponent("Your account has been disabled by your administrator.")).end()
+            }
+            next();
+        }).catch((e) => {
+            next(e);
+        })
     }
     catch (e) {
         console.error(e);
@@ -87,16 +99,11 @@ app.use((req: helpers.Request, res, next) => {
 
 
 import login = require('./controllers/login');
-login(app);
+login.init(app);
 import employees = require('./controllers/employees');
 employees(app);
 
 import database = require('./database');
-import Patient = require('./model/Patient');
-import Appointment = require('./model/Appointment');
-import Employee = require('./model/Employee');
-import ShiftSchedule = require('./model/ShiftSchedule');
-var a = [Patient, Employee, Appointment, ShiftSchedule];
 
 //setup
 (async () => {
@@ -111,6 +118,7 @@ var a = [Patient, Employee, Appointment, ShiftSchedule];
 })
 
 app.use((req, res, next) => {
-	res.status(404);
-	res.render("404");
+    res.status(404);
+    if (req.method == "POST") res.json("404 - Not found").end();
+    else res.render("404");
 })

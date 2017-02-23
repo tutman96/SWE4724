@@ -10,23 +10,23 @@
 	<table class="table table-condensed table-hover table-striped">
 		<thead>
 			<tr>
+				<th style="width:150px">Access Level</th>
 				<th>Name</th>
 				<th>Username</th>
-				<th>Access Level</th>
 				<th></th>
 			</tr>
 		</thead>
 		<% for (var employee of employees) { %>
 			<tr>
+				<td class="accessLevel">
+					<%=employee.disabled ? 'Disabled' : employee.accessLevel%>
+				</td>
 				<td>
 					<%=employee.firstName%>
 						<%=employee.lastName%>
 				</td>
 				<td>
 					<%=employee.username%>
-				</td>
-				<td class="accessLevel">
-					<%=employee.accessLevel%>
 				</td>
 				<td>
 					<a href="/employee/<%-employee.id%>">Edit</a>
@@ -36,10 +36,10 @@
 	</table>
 	<nav>
 		<ul class="pager">
-			<% if (page > 1) { %><li class="previous"><a href="/employees?page=<%=+page - 1%>">&larr; Previous Page</a></li><% } %>
+			<% if (page > 1) { %><li class="previous"><a href="/employees?page=<%=page - 1%>">&larr; Previous Page</a></li><% } %>
 			<% if (page == 1) { %><li class="previous disabled"><a>&larr; Previous Page</a></li><% } %>
 			<li>Page <%=page%> of <%=totalPages%></li>
-			<% if (page < totalPages) { %><li class="next"><a href="/employees?page=<%=+page + 1%>">Next Page &rarr;</a></li><% } %>
+			<% if (page < totalPages) { %><li class="next"><a href="/employees?page=<%=page + 1%>">Next Page &rarr;</a></li><% } %>
 			<% if (page == totalPages) { %><li class="next disabled"><a>Next Page &rarr;</a></li><% } %>
 		</ul>
 	</nav>
@@ -60,6 +60,9 @@
 				case "Practitioner":
 					elem.addClass("label-info")
 					break;
+				case "Disabled":
+					elem.addClass("label-danger");
+					break
 			}
 			origElem.append(elem);
 		})

@@ -1,0 +1,125 @@
+<%- include('partials/header') %>
+
+	<div class="title">Employee:
+		<%= title %>
+	</div>
+	<div class="container">
+		<div class="form-horizontal">
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Username</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" name="username" value="<%=employee.username%>" <%-(!isNew ? 'disabled' : '')%>>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">First Name</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" name="firstName" value="<%=employee.firstName%>">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Last Name</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" name="lastName" value="<%=employee.lastName%>">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Password</label>
+				<div class="col-sm-10">
+					<input type="password" class="form-control" name="password" autocomplete="off">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Access Level</label>
+				<div class="col-sm-10">
+					<select class="form-control" name="accessLevel">
+					<% for (var accessLevel of ['Practitioner','Receptionist','Administrator']) { %>
+					<option value="<%=accessLevel%>" <%=(employee.accessLevel == accessLevel ? 'selected' : '')%>><%=accessLevel%></option>
+					<% } %>
+				</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="alert alert-danger" id="error" style="display:none"></div>
+				<div class="col-sm-offset-2 col-sm-10 text-right">
+					<% if (!isNew && !employee.disabled) { %><button id="disable" class="btn btn-danger pull-left">Disable</button> <% } %>
+					<% if (!isNew && employee.disabled) { %><button id="enable" class="btn btn-success pull-left">Enable</button> <% } %>
+					<button type="submit" id="save" class="btn btn-primary"><%=(isNew ? "Create" : "Save")%></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		var employee = <%-JSON.stringify(employee)%>;
+		var passwordText = "haha, you thought you could get my password";
+		$("input[name=password]").val(passwordText);
+		$("#save").click(function () {
+			$("#error").hide();
+
+			var formData = {
+				username: $("input[name=username]").val(),
+				firstName: $("input[name=firstName]").val(),
+				lastName: $("input[name=lastName]").val(),
+				accessLevel: $("select[name=accessLevel]").val(),
+				password: $("input[name=password]").val()
+			}
+			if (formData.password == passwordText) delete formData.password; //don't update it
+			
+			if (employee.accessLevel && formData.accessLevel != employee.accessLevel && !confirm("Note: by changing the access level, the user will have to log out and log back in for the changes to take effect.")) {
+				return;
+			}
+
+			$.ajax({
+				method: "POST",
+				url: "/employee/" + (employee.id || "new"),
+				data: JSON.stringify(formData),
+				contentType: "application/json",
+				dataType: "json",
+				success: function () {
+					location.href = "/employees";
+				},
+				error: function (response) {
+					$("#error").text(response.responseText).show();
+				}
+			})
+		})
+		
+		$("#disable").click(function () {
+			$("#error").hide();
+			
+			if (!confirm("Are you sure you want to disable this user?")) {
+				return;
+			}
+			
+			$.ajax({
+				method: "POST",
+				url: "/employee/" + employee.id + "/disable",
+				success: function () {
+					location.href = "/employees";
+				},
+				error: function (response) {
+					$("#error").text(response.responseText).show();
+				}
+			})
+		})
+		
+		$("#enable").click(function () {
+			$("#error").hide();
+			
+			if (!confirm("Are you sure you want to enable this user?")) {
+				return;
+			}
+			
+			$.ajax({
+				method: "POST",
+				url: "/employee/" + employee.id + "/enable",
+				success: function () {
+					location.href = "/employees";
+				},
+				error: function (response) {
+					$("#error").text(response.responseText).show();
+				}
+			})
+		})
+	</script>
+<%- include('partials/footer') %>
