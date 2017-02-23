@@ -2,7 +2,13 @@
 <head>
 	<title>AMOMS<% if (title) {%> - <%=title%><%}%></title>
 	<link rel="stylesheet" href="bower_components/bootstrap-css-only/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/app.css">
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
-	<div class="container">
-	
+	<div id="wrapper">
+		<div id="sidebar-wrapper">
+			<%- include('menu') %>
+		</div>
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
