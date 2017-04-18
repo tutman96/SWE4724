@@ -10,7 +10,8 @@ urlpatterns = [
 
     url(r'^dashboard/$', views.DashboardView.as_view(), name='home'),
 
-    url(r'^loginRequest$', views.LoginRequestView.as_view(), name='request')
+    url(r'^loginRequest/$', views.LoginAccess.as_view(), name='request'),
 
+    url(r'^loginValidate/$', views.LoginValidate.as_view(), name='validate'),
 
 ]

@@ -53,7 +53,7 @@ class UserFormView(View):
         return render(request, self.template_name, {'form':form})
 
 
-class LoginRequestView(View):
+class LoginAccess(View):
     def determineAccess(self, access):
         if access == 'R':
             pass
@@ -64,10 +64,14 @@ class LoginRequestView(View):
         else:
             Http404("Access Level Error Occured ")
 
+
+class LoginValidate(View):
     def validateLogin(self, email, password):
         try:
-            employee = Employee.objects.get(employee__email='email')
+            employee = Employee.objects.get(employee__email=email)
         except Employee.DoesNotExist:
+            employee = None
+        else:
             employee = None
 
         if employee:
