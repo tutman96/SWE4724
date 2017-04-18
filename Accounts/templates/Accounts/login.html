@@ -9,12 +9,10 @@
 </head>
 <body>
 
+
 <div id="Header">
   <!--<img src="Images/SymbolLabel.jpg" class="HomeSymbol">-->
-  <button class="CreateUser" type="button" href="{% url 'Accounts:register' %}">Create your Account
-  </button>
 </div>
-
 
 <div class="Features">
   <!--<img class="mySlides" src="Images/SchedulePatients.jpg" style="width:70%">
@@ -36,9 +34,9 @@
     Password<br>
     <input  type="password" id="password">
   </label>
-  <a class="LoginButton" href="{% url 'Accounts:request' %}" type='submit' onclick="saveinfo">
+  <button class="LoginButton" type='submit' onclick="saveinfo">
     LOGIN
-  </a>
+  </button>
 </div>
 
 <div class="HelpBar">
@@ -70,13 +68,15 @@
     x[slideIndex-1].style.display = "block";
   }
 
-  function saveinfo(n) {
+  function saveinfo() {
       var email = document.getElementById('email');
       var password = document.getElementById('password');
 
-      var access = {% url  %}
+      url = {% url 'Accounts:validate' %}
+
 
   }
+
   </script>
 </body>
 </html>

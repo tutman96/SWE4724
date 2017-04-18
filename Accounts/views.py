@@ -54,12 +54,12 @@ class UserFormView(View):
 
 
 class LoginAccess(View):
-    def determineAccess(self, access):
-        if access == 'R':
+    def determineAccess(self, employee):
+        if employee.access == 'R':
             pass
-        elif access == 'P':
+        elif employee.access == 'P':
             pass
-        elif access == 'A':
+        elif employee.access == 'A':
             pass
         else:
             Http404("Access Level Error Occured ")
@@ -76,10 +76,10 @@ class LoginValidate(View):
 
         if employee:
             if password == employee.password:
-                return True
+                return employee
             else:
-                return False
-        return employee
+                return None
+        return None
 
 
 
