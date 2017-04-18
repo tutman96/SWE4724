@@ -1,0 +1,135 @@
+#Header{
+  height: 30;
+  width: 100%;
+  z-index: 0;
+  background-color: #000000;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  top:0;
+  left:0;
+  position: absolute;
+  z-index: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+.CreateUser{
+  padding:5px 20px;
+  background-color:#14a4ec;
+  border:none;
+  color:white;
+  font-family: Verdana;
+  font-size:15px;
+  z-index: 10;
+  position:absolute;
+  left:84%;
+  top:22%;
+}
+.CreateUser:hover{
+  opacity: 0.8;
+}
+.CreateUser:active{
+  background-color:#004e74;
+  box-shadow:0 1px #000;
+  transform: translateY(1px);
+}
+.LogScreen{
+  background-color:#f5f5f5;
+  padding: 250px 250px;
+  position:absolute;
+  top:20%;
+  right:6%;
+  font-family: Verdana;
+  font-size:20px;
+}
+.Emailtype{
+  color:#4a6674;
+  position:absolute;
+  top:25%;
+  left:10%;
+  font-family: Verdana;
+  font-size:15px;
+}
+.Passwordtype{
+  color:#4a6674;
+  position:absolute;
+  top:40%;
+  font-family: Verdana;
+  left:10%;
+  font-size:15px;
+}
+.LogScreen input{
+  width:400px;
+  height:40px;
+}
+#subHeader{
+  font-size:12px;
+  color:#14a4eb;
+}
+.LoginButton{
+  font-family:Verdana;
+  font-size:13px;
+  border:none;
+  text-align: center;
+  color:white;
+  background-color:#14a4eb;
+  padding: 13px 180px;
+  position: absolute;
+  top:60%;
+  left:10%;
+}
+.LoginButton:hover{
+  opacity: 0.8;
+}
+.LoginButton:active{
+  background-color:#004e74;
+  box-shadow:0 1px #000;
+  transform: translateY(1px);
+}
+.Features{
+  position:absolute;
+  top:20%;
+  left:7%;
+  max-width: 800px;
+}
+.mySlides{
+  display:none;
+}
+.leftarrow,.rigtharrow
+{
+  width:70px;
+  height:70px;
+  transition: .5s;
+  float:left;
+  box-shadow: -6px 6px rgba(0,0,0);
+  cursor:pointer;
+  border:none;
+}
+.leftarrow{
+  transform:rotate(45deg);
+}
+.rigtharrow{
+  transform:rotate(225deg);
+}
+.HelpBar{
+  position:fixed;
+  top:93%;
+  width:100%;
+  background-color:#3e3e3e;
+  padding-bottom:50px;
+}
+.HelpBarButtons{
+  color:white;
+  position:fixed;
+  top:95%;
+  left:30%;
+  font-family: Verdana;
+  font-size: 13px;
+}
+.HomeSymbol{
+  height: 60px;
+  width: 270px;
+  position:absolute;
+  left:2%;
+  top:0%;
+}

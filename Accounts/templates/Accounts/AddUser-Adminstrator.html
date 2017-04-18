@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel= "stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+  </body>
+  <div id="mySidenav" >
+
+  </div>
+  <div id="buttonsMenu">
+  <ul>
+    <li>
+      <a id="Home" href="home" style="position:fixed;top:140px; left:0px; z-index:60;">
+      </a>
+    </li>
+    <li>
+      <a id="Reports" href="Reports" style="position:fixed;top:180px; left:0px; z-index:60;">
+      </a>
+    </li>
+  </ul>
+
+  </div>
+  <div id="TopMenu" class="TopMenu">
+    <a class="CurrentUser"> User:Administrator</a>
+    <button id="ReportList">
+      <img src="Images/triangle.jpg" style="height:12px;width:12px;position:absolute;top:16px;right:35px">
+      Add Users
+    </button>
+    <div id="SettingsMenu">
+      <ul>
+        <!--<li><img id="HelpPicture" src="Images/HelpSymbol.jpg"><a id="Help" href="#Lock">Help</a></li>
+        <li><img id="SettingsPicture" src="Images/settings.jpg"><a id="Settings" href="#Settings">Settings</a></li>
+        <li><img id="LogOutPicture" src="Images/logoutSymbol.jpg"> <a id="LogOut" href="#Log Out">Log Out</a></li>
+        <li><img id="LockPicture" src="Images/lockSymbol.jpg"><a id="Lock" href="#Lock">Lock</a></li>-->
+      </ul>
+    </div>
+  </div>
+
+  <div id="FilterMenu">
+    <a id="HeadingText" href="NumberofUsers" style="position:fixed; top:126px; left:120px;">1 Active Users</a>
+    <label>
+      <input type="checkbox" name="Display Inactive" value= "Display">Display Inactive<br>
+    </label>
+    <select class="SortByList">
+      <option value="Sort by" selected disabled>Sort by....</option>
+      <option value="New Members">New Members</option>
+      <option value="Administrators">Administrators</option>
+      <option value="Patients">Patients</option>
+      <option value="Receptionist">Receptionist</option>
+    </select>
+    <button style="position:fixed;right:5%;top:122px" class="SaveButton">
+      Save
+    </button>
+  </div>
+
+  <div  class="bottomMenu">
+    <a id="AddUsers" href="Add Users" style="position:absolute; top:0px; left:120px;">Add Users</a>
+  </div>
+
+  <div class="AddingAUser">
+    <a style="position:absolute; top:170px; left:120px;font-family:Verdana;font-size:15px">Add user</a>
+
+    <label class="FirstName">
+     FIRST NAME<br/>
+      <input type="text" name="First Name" value="FirstName" onfocus="this.value= this.value=='FirstName'?'':this.value;" onblur="this.value=this.value=''?'name':this.value;">
+    </label>
+    <label class="LastName">
+     LAST NAME<br/>
+      <input type="text" name="Last Name" value="Last Name" onfocus="this.value= this.value=='Last Name'?'':this.value;" onblur="this.value=this.value=''?'name':this.value;">
+    </label>
+    <label class="Email">
+      LOGIN EMAIL<br/>
+      <input type="text" name="Email" value="Email" onfocus="this.value= this.value=='Email'?'':this.value;" onblur="this.value=this.value=''?'name':this.value;">
+    </label>
+    <label class="LoginPassword">LOGIN PASSWORD<br/>
+    <input type="text" name="Password" value="Password" onfocus="this.value=this.value=='Password'?'':this.value;"
+onblur="this.value=this.value=''?'Password'?'':this.Password;">
+    </label>
+    <select class="AccessList">
+
+      <option disabled selected>Select access....</option>
+      <option value="New Members">Administrator</option>
+      <option value="Administrators">Physician</option>
+      <option value="Patients">Receptionist</option>
+      <option value="Receptionist">Patient</option>
+    </select>
+    <table border="0" class="UserTable">
+      <tr>
+        <th align="left">NAME</th>
+        <th align="left">EMAIL</th>
+        <th align="left">ACCESS LEVEL</th>
+        <th align="left">PERMISSION/USER STATUS</th>
+      </tr>
+      <tr>
+        <td bgcolor="#ffffff" ><span style="color:#14a4eb;">Jorge Castillo</span>
+        </td>
+        <td bgcolor="#ffffff">
+          Jorge@gmail.com
+        </td>
+        <td bgcolor="#ffffff">
+          Phys.Md/DD
+        </td>
+        <td bgcolor="#ffffff">
+          Admin
+          Status
+        </td>
+        <button style="position:fixed;right:5%;top:265px" class="SaveButton">
+          Deactivate
+        </button>
+      </tr>
+    </table>
+  </div>
+
+  <button class="AddButton" style="position:absolute;                           top:199px;                             left:930px;">
+    Add
+  </button>
+
+</html>

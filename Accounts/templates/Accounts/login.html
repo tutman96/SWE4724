@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{%block title %}AMOMS{% endblock %}</title>
+    {% load staticfiles %}
+  <link rel="stylesheet" type="text/css" href="{% static 'Accounts/Login.css' %}">
+  <link type="text/javscript" src="Slide.js">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+
+<div id="Header">
+  <!--<img src="Images/SymbolLabel.jpg" class="HomeSymbol">-->
+  <button class="CreateUser" type="button" href="{% url 'Accounts:register' %}">Create your Account
+  </button>
+</div>
+
+
+<div class="Features">
+  <!--<img class="mySlides" src="Images/SchedulePatients.jpg" style="width:70%">
+  <img class="mySlides" src="Images/PrescriptionPatients.jpg" style="width:70%">
+  <img class="mySlides" src="Images/PrescriptionEditor.jpg" style="width:70%">-->
+  <button style="position:absolute;top:40%;left:-5%;" class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button style="position:absolute;top:40%;left:70%;" class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+  </div>
+
+<div class="LogScreen">
+  <a style="position:absolute;top:10%;left:45%;color:black;font-weight:bold;">Log In</a>
+  <a id="subHeader" style="position: absolute;                   top:25%;right:10%;">Forgot your Login Email?</a>
+  <a id="subHeader" style="position: absolute;                   top:40%;right:10%;">Forgot your Password?</a>
+  <label class="Emailtype">
+    Email<br>
+    <input  type="text" id="email">
+  </label>
+  <label class="Passwordtype">
+    Password<br>
+    <input  type="password" id="password">
+  </label>
+  <a class="LoginButton" href="{% url 'Accounts:request' %}" type='submit' onclick="saveinfo">
+    LOGIN
+  </a>
+</div>
+
+<div class="HelpBar">
+  <label class="HelpBarButtons">
+  <a id="date" href="date" style="text-decoration:none">@2017 software system name |</a>
+    <a id="sitemap" href="style" style="text-decoration:none">Site Map |</a>
+    <a id="sitemap" href="style" style="text-decoration:none">Terms |</a>
+    <a id="sitemap" href="style" style="text-decoration:none">Privacy Policy |</a>
+      <a id="sitemap" href="style" style="text-decoration:none">software system name Status</a>
+  </label>
+  </div>
+
+<script>
+  var slideIndex = 1;
+  showDivs(slideIndex);
+
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    x[slideIndex-1].style.display = "block";
+  }
+
+  function saveinfo(n) {
+      var email = document.getElementById('email');
+      var password = document.getElementById('password');
+
+  }
+  </script>
+</body>
+</html>
