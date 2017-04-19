@@ -14,11 +14,16 @@ class IndexView(generic.ListView):
         return None
 
 
-class DashboardView(generic.ListView):
-    template_name = 'Accounts/home.html'
+class ReceptionistView(generic.ListView):
+    template_name = 'Accounts/AppointmentList-Receptionist.html'
 
-    def get_queryset(self):
-        return None
+
+class PractionerView(generic.ListView):
+    template_name = 'Accounts/AppointmentList-Receptionist.html'
+
+
+class AdminView(generic.ListView):
+    template_name = 'Accounts/AppointmentList-Admin.html'
 
 
 class UserFormView(View):
@@ -56,30 +61,33 @@ class UserFormView(View):
 class LoginAccess(View):
     def determineAccess(self, employee):
         if employee.access == 'R':
-            pass
+            redirect(ReceptionistView)
         elif employee.access == 'P':
-            pass
+            redirect(PractionerView)
         elif employee.access == 'A':
-            pass
+            redirect(AdminView)
         else:
             Http404("Access Level Error Occured ")
 
 
 class LoginValidate(View):
-    def validateLogin(self, email, password):
-        try:
-            employee = Employee.objects.get(employee__email=email)
-        except Employee.DoesNotExist:
-            employee = None
-        else:
-            employee = None
-
-        if employee:
-            if password == employee.password:
-                return employee
+    def validateLogin(self, request):
+        if request.is_ajax():
+            email = request.POST['email']
+            password = request.POST['password']
+            try:
+                employee = Employee.objects.get(employee__email=email)
+            except Employee.DoesNotExist:
+                employee = None
             else:
-                return None
-        return None
+                employee = None
+
+            if employee:
+                if password == employee.password:
+                    redirect(LoginAccess, employee)
+                else:
+                    Http404("as planned")
+            Http404("No user")
 
 
 

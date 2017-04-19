@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <link rel= "stylesheet" type="text/css" href="Report.css">
+    <script type="text/javascript" src="https://formden.com/static/cdn/formden.js"></script>
+    <link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+  </head>
+  <body style="background-color:#white">
+
+    <div id="mySidenav" >
+
+    </div>
+    <div class="buttonsMenu">
+      <ul>
+        <li>
+          <a id="Home" href="home" style="position:fixed;top:140px; left:0px; z-index:60;">
+          </a>
+        </li>
+        <li>
+          <a id="Reports" href="Reports" style="position:fixed;top:180px; left:0px; z-index:60;">
+          </a>
+        </li>
+      </ul>
+
+    </div>
+    <div id="TopMenu" class="TopMenu">
+      <a class="CurrentUser"> User:Administrator</a>
+      <div id="SettingsMenu">
+        <ul>
+          <li><img id="HelpPicture" src="Images/HelpSymbol.jpg"><a id="Help" href="#Lock">Help</a></li> 
+          <li><img id="SettingsPicture" src="Images/settings.jpg"><a id="Settings" href="#Settings">Settings</a></li>
+          <li><img id="LogOutPicture" src="Images/logoutSymbol.jpg"> <a id="LogOut" href="#Log Out">Log Out</a></li>
+          <li><img id="LockPicture" src="Images/lockSymbol.jpg"><a id="Lock" href="#Lock">Lock</a></li> 
+        </ul>
+      </div>
+    </div>
+    <div  class="bottomMenu">
+      <a id="AddUsers" href="Add Users" style="position:absolute; top:32px; left:120px;">Appointments List</a>
+      <button id="ReportList">
+        <img src="Images/triangle.jpg" style="height:12px;width:12px;position:absolute;top:16px;right:35px">
+        Report List
+      </button>
+    </div>
+    <input type="text" id="SearchBar" onkeyup="myFunction()" placeholder="Search for appointments.." title="Type in a name">
+    <select class="FilterList">
+      <option disabled selected>Select access....</option>
+      <option value="Most Recent Appointments">Most Recent</option>
+      <option value="Oldest">Oldest</option>
+      <option value="HightoLow">High to Low ID</option>
+      <option value="LowtoHigh">Low to High ID</option>
+    </select>
+      <table border="0" class="UserTable">
+        <tr>
+          <th align="left" id="AptID" width="8%">APPOINTMENT ID</th>
+          <th align="left" id="PatientID" width="7%">PATIENT ID</th>
+          <th align="left" id="EmployeeID" width="30%">Practitioner Name</th> 
+          <th align="left" id="CheckIn" width=
+              "9%">CHECK IN TIME</th>
+          <th align="left" id="CheckOut" width="9%">CHECK OUT TIME</th>
+          <th align="left" id="AppStart" width=
+              "9%">APP. START</th>
+          <th align="left" id="AppEnd">APP. END</th>
+        </tr>
+        <tr>
+        </tr>
+      </table>
+
+  </body>
+</html>

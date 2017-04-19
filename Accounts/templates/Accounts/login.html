@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html>
 <head>
     <title>{%block title %}AMOMS{% endblock %}</title>
-    {% load staticfiles %}
+
   <link rel="stylesheet" type="text/css" href="{% static 'Accounts/Login.css' %}">
   <link type="text/javscript" src="Slide.js">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -11,13 +12,13 @@
 
 
 <div id="Header">
-  <!--<img src="Images/SymbolLabel.jpg" class="HomeSymbol">-->
+  <img src="{% static 'Accounts/images/SymbolLabel.jpg' %}" class="HomeSymbol">
 </div>
 
 <div class="Features">
-  <!--<img class="mySlides" src="Images/SchedulePatients.jpg" style="width:70%">
-  <img class="mySlides" src="Images/PrescriptionPatients.jpg" style="width:70%">
-  <img class="mySlides" src="Images/PrescriptionEditor.jpg" style="width:70%">-->
+  <img class="mySlides" src="{% static 'Accounts/images/SchedulePatients.jpg' %}" style="width:70%">
+  <img class="mySlides" src="{% static 'Accounts/images/PrescriptionPatients.jpg' %}" style="width:70%">
+  <img class="mySlides" src="{% static 'Accounts/images/PrescriptionEditor.jpg' %}" style="width:70%">
   <button style="position:absolute;top:40%;left:-5%;" class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
   <button style="position:absolute;top:40%;left:70%;" class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
   </div>
@@ -34,9 +35,9 @@
     Password<br>
     <input  type="password" id="password">
   </label>
-  <button class="LoginButton" type='submit' onclick="saveinfo">
+  <a class="LoginButton" type='submit' href="{% url 'Accounts:validate' %}" onclick="saveinfo">
     LOGIN
-  </button>
+  </a>
 </div>
 
 <div class="HelpBar">
@@ -69,10 +70,17 @@
   }
 
   function saveinfo() {
-      var email = document.getElementById('email');
-      var password = document.getElementById('password');
+      var user = new FormData();
+      user.append('email', document.getElementById('email'));
+      user.append('password', document.getElementById('password'));
 
-      url = {% url 'Accounts:validate' %}
+      urll = '{% url "Accounts:validate" %}';
+
+      $.ajax({
+          method: 'POST',
+          url: urll,
+          data: user
+      });
 
 
   }
