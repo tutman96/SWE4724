@@ -10,12 +10,7 @@ urlpatterns = [
 
     url(r'^loginRequest/$', views.LoginAccess.as_view(), name='request'),
 
-    url(r'^loginValidate/$', views.LoginValidate.as_view(), name='validate'),
+    url(r'^loginValidate/$', views.validateLogin, name='validate'),
 
-    url(r'^receptionist/$', views.ReceptionistView.as_view(), name='receptionist'),
-
-    url(r'^practitioner/$', views.PractionerView.as_view(), name='practitioner'),
-
-    url(r'^admin/$', views.AdminView.as_view(), name='admin'),
 
 ]

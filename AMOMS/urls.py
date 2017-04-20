@@ -21,5 +21,6 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # url(r'^$', views.IndexView.as_view())
-    url(r'^Accounts/', include('Accounts.urls')),
+    url(r'^Accounts/', include('Accounts.urls')), # get rid of this later?
+    url(r'^Schedule/', include('Schedule.urls')), # get rid of this later?
 ]

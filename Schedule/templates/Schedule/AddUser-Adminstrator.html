@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+{% load staticfiles %}
   <head>
     <link rel= "stylesheet" type="text/css" href="style.css">
   </head>
@@ -11,11 +12,11 @@
   <div id="buttonsMenu">
   <ul>
     <li>
-      <a id="Home" href="home" style="position:fixed;top:140px; left:0px; z-index:60;">
+      <a id="Home" href="{% static 'Schedules/images/triangle.jpg' %}" style="position:fixed;top:140px; left:0px; z-index:60;">
       </a>
     </li>
     <li>
-      <a id="Reports" href="Reports" style="position:fixed;top:180px; left:0px; z-index:60;">
+      <a id="Reports" href="{% url 'Schedule:reports' %}" style="position:fixed;top:180px; left:0px; z-index:60;">
       </a>
     </li>
   </ul>
@@ -24,15 +25,15 @@
   <div id="TopMenu" class="TopMenu">
     <a class="CurrentUser"> User:Administrator</a>
     <button id="ReportList">
-      <img src="Images/triangle.jpg" style="height:12px;width:12px;position:absolute;top:16px;right:35px">
+      <img src="{% static 'Schedule/images/triangle.jpg' %}" style="height:12px;width:12px;position:absolute;top:16px;right:35px">
       Add Users
     </button>
     <div id="SettingsMenu">
       <ul>
-        <!--<li><img id="HelpPicture" src="Images/HelpSymbol.jpg"><a id="Help" href="#Lock">Help</a></li>
-        <li><img id="SettingsPicture" src="Images/settings.jpg"><a id="Settings" href="#Settings">Settings</a></li>
-        <li><img id="LogOutPicture" src="Images/logoutSymbol.jpg"> <a id="LogOut" href="#Log Out">Log Out</a></li>
-        <li><img id="LockPicture" src="Images/lockSymbol.jpg"><a id="Lock" href="#Lock">Lock</a></li>-->
+        <li><img id="HelpPicture" src="{% static 'Schedule/images/HelpSymbol.jpg' %}"><a id="Help" href="#Lock">Help</a></li>
+        <li><img id="SettingsPicture" src="{% static 'Schedule/images/settings.jpg' %}"><a id="Settings" href="#Settings">Settings</a></li>
+        <li><img id="LogOutPicture" src="{% static 'Schedule/images/logoutSymbol.jpg' %}"> <a id="LogOut" href="#Log Out">Log Out</a></li>
+        <li><img id="LockPicture" src="{% static 'Schedule/images/lockSymbol.jpg' %}"><a id="Lock" href="#Lock">Lock</a></li>
       </ul>
     </div>
   </div>
@@ -55,7 +56,7 @@
   </div>
 
   <div  class="bottomMenu">
-    <a id="AddUsers" href="Add Users" style="position:absolute; top:0px; left:120px;">Add Users</a>
+    <a id="AddUsers" href="{% url 'Schedule:register' %}" style="position:absolute; top:0px; left:120px;">Add Users</a>
   </div>
 
   <div class="AddingAUser">

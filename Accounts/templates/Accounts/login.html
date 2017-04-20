@@ -35,9 +35,9 @@
     Password<br>
     <input  type="password" id="password">
   </label>
-  <a class="LoginButton" type='submit' href="{% url 'Accounts:validate' %}" onclick="saveinfo">
+  <button class="LoginButton" type='submit' onclick="saveinfo">
     LOGIN
-  </a>
+  </button>
 </div>
 
 <div class="HelpBar">
@@ -73,13 +73,13 @@
       var user = new FormData();
       user.append('email', document.getElementById('email'));
       user.append('password', document.getElementById('password'));
-
-      urll = '{% url "Accounts:validate" %}';
+      var url = "{% url 'Accounts:validate' %}";
 
       $.ajax({
           method: 'POST',
-          url: urll,
-          data: user
+          url: url,
+          data: user.serialize(),
+          dataType: 'json'
       });
 
 
