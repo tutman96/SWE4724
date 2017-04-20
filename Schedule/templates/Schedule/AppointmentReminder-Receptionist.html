@@ -1,21 +1,19 @@
 <html>
 {% load staticfiles %}
   <head>
-    <link rel= "stylesheet" type="text/css" href="{% static 'Schedule/Report.css' %}">
+    <link rel= "stylesheet" type="text/css" href="{% static 'Schedule:Report.css' %}">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
   </head>
   <body style="background-color:#white">
-
     <div id="mySidenav" >
-
     </div>
     <div class="buttonsMenu">
       <ul>
         <a href="{% url 'Schedule:rhome' %}">
-          <li id="Home" href="[% url 'Schedule:rhome' %}" style="position:fixed;top:140px; left:0px; z-index:60;">
+          <li id="Home" href="{% url 'Schedule:rhome' %}" style="position:fixed;top:140px; left:0px; z-index:60;">
           </li>
         </a>
         <a href="ReportPage-Receptionist.html">
@@ -27,7 +25,6 @@
         <li id="AddUsersButton" href="{% url 'Schedule:rreports' %}" style="position:fixed;top:260px;left:0px;z-index:60;">
         </li>
       </ul>
-
     </div>
     <div id="TopMenu" class="TopMenu">
       <a class="CurrentUser"> User:Receptionist</a>
@@ -41,8 +38,13 @@
       </div>
     </div>
     <div  class="bottomMenu">
+      <button id="ReportList">
+        <img src="{% static 'Schedule/images/triangle.jpg' %}" style="height:12px;width:12px;position:absolute;top:16px;right:80px">
+        Appointment Remainders
+      </button>
     </div>
-    <div class="bootstrap-iso" style="position:absolute;top:23%;left:70%;z-index:50;height:0;width:350px;">
+    <input type="text" id="SearchBar" onkeyup="myFunction()" placeholder="Search for appointments.." title="Type in a name">
+<div class="bootstrap-iso" style="position:absolute;top:23%;left:70%;z-index:50;height:0;width:350px;">
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-6 col-sm-6 col-xs-12">
@@ -63,7 +65,7 @@
         </div>
       </div>
     </div>
-    <div class="bootstrap-iso" style="position:absolute;top:23%;left:80%;z-index:50;height:0;width:400px;">
+<div class="bootstrap-iso" style="position:absolute;top:23%;left:80%;z-index:50;height:0;width:400px;">
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-6 col-sm-6 col-xs-12">
@@ -84,10 +86,9 @@
         </div>
       </div>
     </div>
-    <button class ="AddButton" style="position:absolute;top:23%;right:3%;z-index:40;">
+    <buton class ="AddButton" style="position:absolute;top:23%;right:3%;z-index:40;">
       Apply
-    </button>
-    <input type="text" id="SearchBar" onkeyup="myFunction()" placeholder="Search for appointments.." title="Type in a name">
+    </buton>
     <select class="FilterList">
       <option disabled selected>Select access....</option>
       <option value="Most Recent Appointments">Most Recent</option>
@@ -97,15 +98,11 @@
     </select>
     <table border="0" class="UserTable">
       <tr>
-        <th align="left" id="AptID" width="8%">APPOINTMENT ID</th>
-        <th align="left" id="PatientID" width="7%">PATIENT ID</th>
-        <th align="left" id="EmployeeID" width="30%">Practitioner Name</th> 
-        <th align="left" id="CheckIn" width=
-"9%">CHECK IN TIME</th>
-        <th align="left" id="CheckOut" width="9%">CHECK OUT TIME</th>
-        <th align="left" id="AppStart" width=
-"9%">APP. START</th>
-        <th align="left" id="AppEnd">APP. END</th>
+        <th align="left" width="10%" id="AptID">APPOINTMENT ID</th>
+        <th align="left" width="10%" id="PatientID">PATIENT ID</th>
+        <th align="left" width="30%" id="PractitionerName">Practitioner Name</th> 
+        <th align="left" width="10%" id="ApptDate">APPT. DATE</th>
+        <th align="left" id="Reason">REASON FOR VISIT</th>
       </tr>
       <tr>
       </tr>

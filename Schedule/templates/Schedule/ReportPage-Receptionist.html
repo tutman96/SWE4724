@@ -1,0 +1,72 @@
+<html>
+{% load staticfiles %}
+  <head>
+    <link rel= "stylesheet" type="text/css" href="{% static 'Schedule/Report.css' %}">
+  </head>
+  <body style="background-color:#dfdfdf">
+
+    <div id="mySidenav" >
+
+    </div>
+    <div class="buttonsMenu">
+      <ul>
+        <a href="{% url 'Schedule:rhome' %}">
+          <li id="Home" style="position:fixed;top:140px; left:0px; z-index:60;" onclick="location.href='templates/Schedule/Home-Receptionist.html'">
+          </li>
+        </a>
+       <a href="ReportPage-Receptionist.html">
+         <li id="ReportsButton" href="{% url 'Schedule:rreports' %}" style="position:fixed;top:180px; left:0px; z-index:60;">
+         </li>
+        </a>
+        <li id="ScheduleButton" href="{% url 'Schedule:rreports' %}" style="position:fixed;top:220px;left:0px;z-index:60;">
+        </li>
+        <li id="AddUsersButton" href="{% url 'Schedule:rreports' %}" style="position:fixed;top:260px;left:0px;z-index:60;">
+        </li>
+      </ul>
+
+    </div>
+    <div id="TopMenu" class="TopMenu">
+      <a class="CurrentUser"> User:Receptionist</a>
+      <div id="SettingsMenu">
+        <ul>
+          <li><img id="HelpPicture" src="{% static 'Schedule/images/HelpSymbol.jpg' %}"><a id="Help" href="#Lock">Help</a></li>
+          <li><img id="SettingsPicture" src="{% static 'Schedule/images/settings.jpg' %}"><a id="Settings" href="#Settings">Settings</a></li>
+          <li><img id="LogOutPicture" src="{% static 'Schedule/images/logoutSymbol.jpg' %}"> <a id="LogOut" href="#Log Out">Log Out</a></li>
+          <li><img id="LockPicture" src="{% static 'Schedule/images/lockSymbol.jpg' %}"><a id="Lock" href="#Lock">Lock</a></li>
+        </ul>
+      </div>
+    </div>
+    <div  class="bottomMenu">
+      <a id="AddUsers" href="{% url 'Schedule:register' %}" style="position:absolute; top:32px; left:120px;z-index:5;">Report List</a>
+      <button id="ReportList">
+        Report List
+      </button>
+      <div class="Buttons">
+        <img src="{% static 'Schedule/images/Report Buttons.jpg' %}" id="callList">
+        <a href="{% url 'Schedule:rcallback' %}">
+          <button class="ShowReport" id="callBackReport" style="position:absolute;                           top:277px;                             left:140px;">
+            Show Report
+          </button>
+        </a>
+        <a href="{% url 'Schedule:reminder'">
+          <img src="{% static 'Schedule/images/AppointmentReminders.jpg' %}" id="AppointmentList">
+          <button class="ShowReport" id="AppointmentList" style="position:absolute;                           top:277px;                             left:530px;">
+            Show Report
+          </button>
+        </a>
+        <a href="MissedAppointments-Receptionist.html">
+          <img src="{% static 'Schedule/images/MissedAppointments.jpg' %}" id="MissedAppointmentList">
+          <button class="ShowReport" id="MissedAppointments" style="position:absolute;                           top:277px;                             left:920px;">
+            Show Report
+          </button>
+        </a>
+        <a href="AppointmentList-Receptionist.html">
+          <img src="{% static 'Schedule/images/HistoryOfAppointments.jpg' %}" id="HistoryOfAppointments">
+          <button class="ShowReport" id="HisAppointments" style="position:absolute;top:502px;left:140px;">
+            Show Report
+          </button>
+        </a>
+      </div>
+    </div>
+</body>
+</html>

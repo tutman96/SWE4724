@@ -2,54 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7d78c31-2eef-4995-b691-900b7f0b288f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/AddUsers.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/AddUsersBlack.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/AddUsersWhite.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/AppointmentReminders.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/Asterisk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/HistoryOfAppointments.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/HomeSymbolBlack.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/HomeSymbolBlue.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/MissedAppointments.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/PatientProfile.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/Practitioner.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/PractitionerBlue.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/PractitionerNavigation.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/PrescriptionEditor.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/PrescriptionPatients.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/ReceptionistNavigation.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/ReceptionistNavigationBlack.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/ReceptionistNavigationButton.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/Report Buttons.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/ReportButtons.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/ReportNavigation.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/ReportNavigations.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/ReportsSymbolBlack.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/ReportsSymbolBlue.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/ScheduleNavigationButton.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/SchedulePatients.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/SchedulePatientsBlack.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/SchedulePatientsBlue.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/SearchIcon-0100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/SymbolLabel.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/arrowleft.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/arrowright.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/background.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/Report.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Accounts/static/Accounts/images/HelpSymbol.jpg" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/HelpSymbol.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Accounts/static/Accounts/images/lockSymbol.jpg" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/lockSymbol.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Accounts/static/Accounts/images/logoutSymbol.jpg" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/logoutSymbol.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Accounts/static/Accounts/images/settings.jpg" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/settings.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Accounts/static/Accounts/images/triangle.jpg" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/images/triangle.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Accounts/templates/Accounts/AddUser-Adminstrator.html" afterPath="$PROJECT_DIR$/Schedule/templates/Schedule/AddUser-Adminstrator.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Accounts/templates/Accounts/AppointmentList-Admin.html" afterPath="$PROJECT_DIR$/Schedule/templates/Schedule/AppointmentList-Admin.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Accounts/templates/Accounts/AppointmentList-Receptionist.html" afterPath="$PROJECT_DIR$/Schedule/templates/Schedule/AppointmentList-Receptionist.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/templates/Schedule/AppointmentReminder-Admin.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/templates/Schedule/AppointmentReminder-Receptionist.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/templates/Schedule/CallBack-Admin.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/templates/Schedule/CallBack-Receptionist.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/templates/Schedule/Home-Administrator.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/templates/Schedule/Home-Receptionist.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/templates/Schedule/MissedAppointments-Admin.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/templates/Schedule/MissedAppointments-Receptionist.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/templates/Schedule/ReportPage-Admin.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Schedule/templates/Schedule/ReportPage-Receptionist.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AMOMS/urls.py" afterPath="$PROJECT_DIR$/AMOMS/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Accounts/templates/Accounts/login.html" afterPath="$PROJECT_DIR$/Accounts/templates/Accounts/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Accounts/urls.py" afterPath="$PROJECT_DIR$/Accounts/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Accounts/views.py" afterPath="$PROJECT_DIR$/Accounts/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Schedule/forms.py" afterPath="$PROJECT_DIR$/Schedule/forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Schedule/templates/Schedule/AppointmentList-Admin.html" afterPath="$PROJECT_DIR$/Schedule/templates/Schedule/AppointmentList-Admin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Schedule/templates/Schedule/AppointmentList-Receptionist.html" afterPath="$PROJECT_DIR$/Schedule/templates/Schedule/AppointmentList-Receptionist.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Schedule/urls.py" afterPath="$PROJECT_DIR$/Schedule/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Schedule/views.py" afterPath="$PROJECT_DIR$/Schedule/views.py" />
     </list>
@@ -66,40 +31,42 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Accounts/templates/Accounts/login.html">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Schedule/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="81" column="26" lean-forward="true" selection-start-line="81" selection-start-column="26" selection-end-line="81" selection-end-column="26" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="220">
+              <caret line="18" column="29" lean-forward="false" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Accounts/views.py">
+      <file leaf-file-name="Home-Receptionist.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Schedule/templates/Schedule/Home-Receptionist.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="90" column="33" lean-forward="true" selection-start-line="90" selection-start-column="33" selection-end-line="90" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="320">
+              <caret line="16" column="44" lean-forward="false" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Accounts/urls.py">
+      <file leaf-file-name="AppointmentList-Admin.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Schedule/templates/Schedule/AppointmentList-Admin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="12" column="48" lean-forward="false" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="740">
+              <caret line="37" column="37" lean-forward="false" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Schedule/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="29" column="7" lean-forward="false" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -113,16 +80,26 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Accounts/forms.py" />
-        <option value="$PROJECT_DIR$/Schedule/templates/Schedule/AppointmentList-Admin.html" />
         <option value="$PROJECT_DIR$/Schedule/templates/Schedule/AddUser-Adminstrator.html" />
         <option value="$PROJECT_DIR$/AMOMS/urls.py" />
-        <option value="$PROJECT_DIR$/Schedule/views.py" />
         <option value="$PROJECT_DIR$/Schedule/static/Schedule/Report.css" />
-        <option value="$PROJECT_DIR$/Schedule/templates/Schedule/AppointmentList-Receptionist.html" />
-        <option value="$PROJECT_DIR$/Schedule/urls.py" />
         <option value="$PROJECT_DIR$/Accounts/urls.py" />
         <option value="$PROJECT_DIR$/Accounts/views.py" />
         <option value="$PROJECT_DIR$/Accounts/templates/Accounts/login.html" />
+        <option value="$PROJECT_DIR$/Schedule/templates/Schedule/AppointmentList-Receptionist.html" />
+        <option value="$PROJECT_DIR$/Schedule/templates/Schedule/CallBack-Admin.html" />
+        <option value="$PROJECT_DIR$/Schedule/templates/Schedule/CallBack-Receptionist.html" />
+        <option value="$PROJECT_DIR$/Schedule/templates/Schedule/Home-Administrator.html" />
+        <option value="$PROJECT_DIR$/Schedule/templates/Schedule/MissedAppointments-Admin.html" />
+        <option value="$PROJECT_DIR$/Schedule/templates/Schedule/MissedAppointments-Receptionist.html" />
+        <option value="$PROJECT_DIR$/Schedule/templates/Schedule/ReportPage-Admin.html" />
+        <option value="$PROJECT_DIR$/Schedule/templates/Schedule/ReportPage-Receptionist.html" />
+        <option value="$PROJECT_DIR$/Schedule/templates/Schedule/AppointmentReminder-Admin.html" />
+        <option value="$PROJECT_DIR$/Schedule/templates/Schedule/AppointmentReminder-Receptionist.html" />
+        <option value="$PROJECT_DIR$/Schedule/urls.py" />
+        <option value="$PROJECT_DIR$/Schedule/views.py" />
+        <option value="$PROJECT_DIR$/Schedule/templates/Schedule/AppointmentList-Admin.html" />
+        <option value="$PROJECT_DIR$/Schedule/templates/Schedule/Home-Receptionist.html" />
       </list>
     </option>
   </component>
@@ -292,9 +269,9 @@
       <recent name="$PROJECT_DIR$/Schedule" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Schedule/templates/Schedule" />
       <recent name="$PROJECT_DIR$/Schedule/static/Schedule/images" />
       <recent name="$PROJECT_DIR$/Schedule/static/Schedule" />
-      <recent name="$PROJECT_DIR$/Schedule/templates/Schedule" />
       <recent name="$PROJECT_DIR$/Accounts/templates/Accounts" />
       <recent name="$PROJECT_DIR$/Accounts/static/Accounts/images" />
     </key>
@@ -533,17 +510,17 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23984376" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -551,27 +528,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23984376" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872504" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -580,7 +536,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -780,28 +738,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Schedule/templates/Schedule/AddUser-Adminstrator.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1220">
-          <caret line="26" column="28" lean-forward="true" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#4;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AMOMS/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="412">
           <caret line="23" column="74" lean-forward="false" selection-start-line="23" selection-start-column="74" selection-end-line="23" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Schedule/templates/Schedule/AppointmentList-Admin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="678">
-          <caret line="37" column="46" lean-forward="false" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
           <folding />
         </state>
       </provider>
@@ -814,42 +754,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Schedule/urls.py">
+    <entry file="file://$PROJECT_DIR$/Accounts/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+        <state relative-caret-position="540">
+          <caret line="90" column="33" lean-forward="true" selection-start-line="90" selection-start-column="33" selection-end-line="90" selection-end-column="33" />
           <folding>
-            <element signature="e#0#32#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Schedule/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" column="29" lean-forward="false" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#32#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Schedule/templates/Schedule/AppointmentList-Receptionist.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="44" column="20" lean-forward="false" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Accounts/templates/Accounts/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="81" column="26" lean-forward="true" selection-start-line="81" selection-start-column="26" selection-end-line="81" selection-end-column="26" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -864,13 +774,137 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Accounts/views.py">
+    <entry file="file://$PROJECT_DIR$/Accounts/templates/Accounts/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="90" column="33" lean-forward="true" selection-start-line="90" selection-start-column="33" selection-end-line="90" selection-end-column="33" />
+        <state relative-caret-position="140">
+          <caret line="7" column="44" lean-forward="false" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Schedule/templates/Schedule/AddUser-Adminstrator.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="26" column="28" lean-forward="true" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Schedule/templates/Schedule/AppointmentList-Receptionist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1762">
+          <caret line="3" column="86" lean-forward="false" selection-start-line="3" selection-start-column="86" selection-end-line="3" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Schedule/templates/Schedule/CallBack-Admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-462">
+          <caret line="17" column="50" lean-forward="false" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Schedule/templates/Schedule/CallBack-Receptionist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1802">
+          <caret line="14" column="40" lean-forward="false" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Schedule/templates/Schedule/Home-Administrator.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-142">
+          <caret line="10" column="50" lean-forward="false" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Schedule/templates/Schedule/MissedAppointments-Admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-362">
+          <caret line="18" column="67" lean-forward="false" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Schedule/templates/Schedule/MissedAppointments-Receptionist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-902">
+          <caret line="40" column="29" lean-forward="false" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Schedule/templates/Schedule/ReportPage-Admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-402">
+          <caret line="23" column="48" lean-forward="false" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Schedule/templates/Schedule/ReportPage-Receptionist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="50" column="35" lean-forward="false" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Schedule/templates/Schedule/AppointmentReminder-Admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="32" column="12" lean-forward="true" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Schedule/templates/Schedule/AppointmentReminder-Receptionist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Schedule/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="29" column="7" lean-forward="false" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Schedule/templates/Schedule/AppointmentList-Admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="740">
+          <caret line="37" column="37" lean-forward="false" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Schedule/templates/Schedule/Home-Receptionist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="44" lean-forward="false" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Schedule/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="18" column="29" lean-forward="false" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>

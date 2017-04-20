@@ -1,9 +1,7 @@
 <html>
 {% load staticfiles %}
   <head>
-    <link rel= "stylesheet" type="text/css" href="Report.css">
-    <script type="text/javascript" src="https://formden.com/static/cdn/formden.js"></script>
-    <link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <link rel= "stylesheet" type="text/css" href="{% static 'Schedule/Report.css' %}">
   </head>
   <body style="background-color:#white">
 
@@ -35,7 +33,7 @@
       </div>
     </div>
     <div  class="bottomMenu">
-      <a id="AddUsers" href="{% url 'Schedule:register' %}" style="position:absolute; top:32px; left:120px;">Appointments List</a>
+      <a id="AddUsers" href="{% url 'Schedule:register' %}" style="position:absolute; top:32px; left:120px;">Call Back Reminders</a>
       <button id="ReportList">
         <img src="{% static 'Schedule/images/triangle.jpg' %}" style="height:12px;width:12px;position:absolute;top:16px;right:35px">
         Report List
@@ -49,21 +47,18 @@
       <option value="HightoLow">High to Low ID</option>
       <option value="LowtoHigh">Low to High ID</option>
     </select>
-      <table border="0" class="UserTable">
-        <tr>
-          <th align="left" id="AptID" width="8%">APPOINTMENT ID</th>
-          <th align="left" id="PatientID" width="7%">PATIENT ID</th>
-          <th align="left" id="EmployeeID" width="30%">Practitioner Name</th> 
-          <th align="left" id="CheckIn" width=
-              "9%">CHECK IN TIME</th>
-          <th align="left" id="CheckOut" width="9%">CHECK OUT TIME</th>
-          <th align="left" id="AppStart" width=
-              "9%">APP. START</th>
-          <th align="left" id="AppEnd">APP. END</th>
-        </tr>
-        <tr>
-        </tr>
-      </table>
+    <table border="0" class="UserTable">
+      <tr>
+        <th align="left" width="10%" id="AptID">APPOINTMENT ID</th>
+        <th align="left" width="10%" id="PatientID">PATIENT ID</th>
+        <th align="left" width="25%" id="PractitionerName">Practitioner Name</th> 
+        <th align="left" width="20%" id="Number">Phone Number</th>
+        <th align="left" width="10%" id="ApptDate">APPT. DATE</th>
+        <th align="left" id="Reason">REASON FOR VISIT</th>
+      </tr>
+      <tr>
+      </tr>
+    </table>
 
   </body>
 </html>

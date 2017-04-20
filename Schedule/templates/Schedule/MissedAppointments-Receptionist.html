@@ -1,21 +1,18 @@
 <html>
-{% load staticfiles %}
+  {% load staticfiles %}
   <head>
     <link rel= "stylesheet" type="text/css" href="{% static 'Schedule/Report.css' %}">
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
   </head>
   <body style="background-color:#white">
-
     <div id="mySidenav" >
-
     </div>
     <div class="buttonsMenu">
       <ul>
-        <a href="{% url 'Schedule:rhome' %}">
-          <li id="Home" href="[% url 'Schedule:rhome' %}" style="position:fixed;top:140px; left:0px; z-index:60;">
+        <a href="Home-Receptionist.html">
+          <li id="Home" href="{% url 'Schedule:rhome' %}" style="position:fixed;top:140px; left:0px; z-index:60;">
           </li>
         </a>
         <a href="ReportPage-Receptionist.html">
@@ -39,9 +36,15 @@
           <li><img id="LockPicture" src="{% static 'Schedule/images/lockSymbol.jpg' %}"><a id="Lock" href="#Lock">Lock</a></li>
         </ul>
       </div>
+      
     </div>
     <div  class="bottomMenu">
+      <button id="ReportList">
+        <img src="{% static 'Schedule/images/triangle.jpg' %}" style="height:11px;width:12px;position:absolute;top:17px;right:35px">
+        Report List
+      </button>
     </div>
+    <input type="text" id="SearchBar" onkeyup="myFunction()" placeholder="Search for appointments.." title="Type in a name">
     <div class="bootstrap-iso" style="position:absolute;top:23%;left:70%;z-index:50;height:0;width:350px;">
       <div class="container-fluid">
         <div class="row">
@@ -54,7 +57,7 @@
                       <i class="fa fa-calendar">
                       </i>
                     </div>
-                    <input class="form-control" id="dateFrom1" name="date" placeholder="Date From" type="text"/>
+                    <input class="form-control" id="dateFrom" name="date" placeholder="Date From" type="text"/>
                   </div>
                 </div>
               </div>
@@ -75,7 +78,7 @@
                       <i class="fa fa-calendar">
                       </i>
                     </div>
-                    <input class="form-control" id="DateTo1" name="date" placeholder="Date To" type="text"/>
+                    <input class="form-control" id="DateTo" name="date" placeholder="Date To" type="text"/>
                   </div>
                 </div>
               </div>
@@ -84,28 +87,19 @@
         </div>
       </div>
     </div>
-    <button class ="AddButton" style="position:absolute;top:23%;right:3%;z-index:40;">
-      Apply
-    </button>
-    <input type="text" id="SearchBar" onkeyup="myFunction()" placeholder="Search for appointments.." title="Type in a name">
     <select class="FilterList">
       <option disabled selected>Select access....</option>
       <option value="Most Recent Appointments">Most Recent</option>
-      <option value="Oldest">Oldest</option>
-      <option value="HightoLow">High to Low ID</option>
-      <option value="LowtoHigh">Low to High ID</option>
+      <option value="Oldest">High to Low ID</option>
+      <option value="Patients">Low to High ID</option>
     </select>
     <table border="0" class="UserTable">
       <tr>
-        <th align="left" id="AptID" width="8%">APPOINTMENT ID</th>
-        <th align="left" id="PatientID" width="7%">PATIENT ID</th>
-        <th align="left" id="EmployeeID" width="30%">Practitioner Name</th> 
-        <th align="left" id="CheckIn" width=
-"9%">CHECK IN TIME</th>
-        <th align="left" id="CheckOut" width="9%">CHECK OUT TIME</th>
-        <th align="left" id="AppStart" width=
-"9%">APP. START</th>
-        <th align="left" id="AppEnd">APP. END</th>
+        <th align="left" id="date" width="7%">DATE </th>
+        <th align="left" id="Time" width="10%">TIME</th>
+        <th align="left" id="PatientsName" width="30%">PATIENTS NAME</th> 
+        <th align="left" id="Pratitioner" width="30%">ASSIGNED PRACTITIONER</th>
+        <th align="left" id="VisitReason" width="30%">REASON FOR VISIT</th>
       </tr>
       <tr>
       </tr>

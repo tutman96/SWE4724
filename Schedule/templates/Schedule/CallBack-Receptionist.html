@@ -8,23 +8,21 @@
     <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
   </head>
   <body style="background-color:#white">
-
     <div id="mySidenav" >
-
     </div>
     <div class="buttonsMenu">
       <ul>
         <a href="{% url 'Schedule:rhome' %}">
-          <li id="Home" href="[% url 'Schedule:rhome' %}" style="position:fixed;top:140px; left:0px; z-index:60;">
+          <li id="Home" href="{% url 'Schedule:rhome' %}" style="position:fixed;top:140px; left:0px; z-index:60;">
           </li>
         </a>
         <a href="ReportPage-Receptionist.html">
-          <li id="ReportsButton" href="{% url 'Schedule:rreports' %}" style="position:fixed;top:180px; left:0px; z-index:60;">
+          <li id="ReportsButton" href="{% url 'Schedule:reports' %}" style="position:fixed;top:180px; left:0px; z-index:60;">
           </li>
         </a>
-        <li id="ScheduleButton" href="{% url 'Schedule:rreports' %}" style="position:fixed;top:220px;left:0px;z-index:60;">
+        <li id="ScheduleButton" href="{% url 'Schedule:reports' %}" style="position:fixed;top:220px;left:0px;z-index:60;">
         </li>
-        <li id="AddUsersButton" href="{% url 'Schedule:rreports' %}" style="position:fixed;top:260px;left:0px;z-index:60;">
+        <li id="AddUsersButton" href="{% url 'Schedule:reports' %}" style="position:fixed;top:260px;left:0px;z-index:60;">
         </li>
       </ul>
 
@@ -34,15 +32,18 @@
       <div id="SettingsMenu">
         <ul>
           <li><img id="HelpPicture" src="{% static 'Schedule/images/HelpSymbol.jpg' %}"><a id="Help" href="#Lock">Help</a></li>
-          <li><img id="SettingsPicture" src="{% static 'Schedule/images/settings.jpg' %}"><a id="Settings" href="#Settings">Settings</a></li>
-          <li><img id="LogOutPicture" src="{% static 'Schedule/images/logoutSymbol.jpg' %}"> <a id="LogOut" href="#Log Out">Log Out</a></li>
-          <li><img id="LockPicture" src="{% static 'Schedule/images/lockSymbol.jpg' %}"><a id="Lock" href="#Lock">Lock</a></li>
+          <li><img id="SettingsPicture" src="{% static Schedule/images/settings.jpg' %}"><a id="Settings" href="#Settings">Settings</a></li>
+          <li><img id="LogOutPicture" src="{% static 'Schedule/images/logoutSymbol.jpg %}"> <a id="LogOut" href="#Log Out">Log Out</a></li>
+          <li><img id="LockPicture" src="{% static 'Schedule/images/lockSymbol.jpg %}"><a id="Lock" href="#Lock">Lock</a></li>
         </ul>
       </div>
     </div>
+    
     <div  class="bottomMenu">
+      <a id="AddUsers"  style="position:absolute; top:32px; left:120px;">Appointment Remainders</a>
     </div>
-    <div class="bootstrap-iso" style="position:absolute;top:23%;left:70%;z-index:50;height:0;width:350px;">
+    <input type="text" id="SearchBar" onkeyup="myFunction()" placeholder="Search for appointments.." title="Type in a name">
+  <div class="bootstrap-iso" style="position:absolute;top:23%;left:70%;z-index:50;height:0;width:350px;">
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-6 col-sm-6 col-xs-12">
@@ -54,7 +55,7 @@
                       <i class="fa fa-calendar">
                       </i>
                     </div>
-                    <input class="form-control" id="dateFrom1" name="date" placeholder="Date From" type="text"/>
+                    <input class="form-control" id="dateFrom" name="date" placeholder="Date From" type="text"/>
                   </div>
                 </div>
               </div>
@@ -75,7 +76,7 @@
                       <i class="fa fa-calendar">
                       </i>
                     </div>
-                    <input class="form-control" id="DateTo1" name="date" placeholder="Date To" type="text"/>
+                    <input class="form-control" id="DateTo" name="date" placeholder="Date To" type="text"/>
                   </div>
                 </div>
               </div>
@@ -84,10 +85,9 @@
         </div>
       </div>
     </div>
-    <button class ="AddButton" style="position:absolute;top:23%;right:3%;z-index:40;">
-      Apply
-    </button>
-    <input type="text" id="SearchBar" onkeyup="myFunction()" placeholder="Search for appointments.." title="Type in a name">
+    <burton class ="AddButton" style="position:absolute;top:23%;right:3%;z-index:40;">
+    Apply
+    </burton>
     <select class="FilterList">
       <option disabled selected>Select access....</option>
       <option value="Most Recent Appointments">Most Recent</option>
@@ -97,15 +97,11 @@
     </select>
     <table border="0" class="UserTable">
       <tr>
-        <th align="left" id="AptID" width="8%">APPOINTMENT ID</th>
-        <th align="left" id="PatientID" width="7%">PATIENT ID</th>
-        <th align="left" id="EmployeeID" width="30%">Practitioner Name</th> 
-        <th align="left" id="CheckIn" width=
-"9%">CHECK IN TIME</th>
-        <th align="left" id="CheckOut" width="9%">CHECK OUT TIME</th>
-        <th align="left" id="AppStart" width=
-"9%">APP. START</th>
-        <th align="left" id="AppEnd">APP. END</th>
+        <th align="left" width="10%" id="AptID">APPOINTMENT ID</th>
+        <th align="left" width="10%" id="PatientID">PATIENT ID</th>
+        <th align="left" width="30%" id="PractitionerName">Practitioner Name</th> 
+        <th align="left" width="10%" id="ApptDate">APPT. DATE</th>
+        <th align="left" id="Reason">REASON FOR VISIT</th>
       </tr>
       <tr>
       </tr>
@@ -113,3 +109,20 @@
 
   </body>
 </html>
+<script>
+  $(document).ready(function() {
+    $("#datepicker").datepicker();
+  });
+</script>
+<script>
+  $(document).ready(function(){
+    var date_input=$('input[name="date"]'); //our date input has the name "date"
+    var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+    date_input.datepicker({
+      format: 'mm/dd/yyyy',
+      container: container,
+      todayHighlight: true,
+      autoclose: true,
+    })
+  })
+</script>

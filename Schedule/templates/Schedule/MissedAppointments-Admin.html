@@ -1,0 +1,60 @@
+<html>
+{% load staticfiles %}
+  <head>
+    <link rel= "stylesheet" type="text/css" href="{% static 'Schedule/Report.css' %}">
+  </head>
+  <body style="background-color:#white">
+
+    <div id="mySidenav" >
+
+    </div>
+    <div class="buttonsMenu">
+      <ul>
+        <li id="Home" href="{% url 'Schedule:ahome' %}" style="position:fixed;top:140px; left:0px; z-index:60;">
+        </li>
+        <li id="ReportsButton" href="{% url 'Schedule:areports' %}" style="position:fixed;top:180px; left:0px; z-index:60;">
+        </li>
+        <li id="ScheduleButton" href="{% url 'Schedule:areports' %}" style="position:fixed;top:220px;left:0px;z-index:60;">
+        </li>
+        <li id="AddUsersButton" href="{% url 'Schedule:areports' %}" style="position:fixed;top:260px;left:0px;z-index:60;">
+        </li>
+      </ul>
+
+    </div>
+    <div id="TopMenu" class="TopMenu">
+      <a class="CurrentUser"> User:Administrator</a>
+      <div id="SettingsMenu">
+        <ul>
+          <li><img id="HelpPicture" src="{% static 'Schedule/images/HelpSymbol.jpg' %}"><a id="Help" href="#Lock">Help</a></li>
+          <li><img id="SettingsPicture" src="{% static 'Schedule/images/settings.jpg' %}"><a id="Settings" href="#Settings">Settings</a></li>
+          <li><img id="LogOutPicture" src="{% static 'Schedule/images/logoutSymbol.jpg' %}"> <a id="LogOut" href="#Log Out">Log Out</a></li>
+          <li><img id="LockPicture" src="{% static 'Schedule/images/lockSymbol.jpg' %}"><a id="Lock" href="#Lock">Lock</a></li>
+        </ul>
+      </div>
+    </div>
+    <div  class="bottomMenu">
+      <a id="AddUsers" href="{% url 'Schedule:register' %}" style="position:absolute; top:32px; left:120px;">Missed Appointments List</a>
+      <button id="ReportList">
+        <img src="{% static 'Schedule/images/triangle.jpg' %}" style="height:11px;width:12px;position:absolute;top:17px;right:35px">
+        Report List
+      </button>
+    </div>
+    <input type="text" id="SearchBar" onkeyup="myFunction()" placeholder="Search for appointments.." title="Type in a name">
+    <select class="FilterList">
+      <option disabled selected>Select access....</option>
+      <option value="Most Recent Appointments">Most Recent</option>
+      <option value="Oldest">High to Low ID</option>
+      <option value="Patients">Low to High ID</option>
+    </select>
+    <table border="0" class="UserTable">
+      <tr>
+        <th align="left" id="date" width="7%">DATE </th>
+        <th align="left" id="Time" width="10%">TIME</th>
+        <th align="left" id="PatientsName" width="30%">PATIENTS NAME</th> 
+        <th align="left" id="Pratitioner" width="30%">ASSIGNED PRACTITIONER</th>
+        <th align="left" id="VisitReason" width="30%">REASON FOR VISIT</th>
+      </tr>
+    </table>
+
+  </body>
+</html>
