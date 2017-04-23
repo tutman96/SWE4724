@@ -117,11 +117,8 @@ class ReceptionistPatientsView(generic.ListView):
         return None
 
 
-class AdminRegister(View):
+class AdminRegister(generic.ListView):
     template_name = 'Schedule/AddUser-Adminstrator.html'
 
-    def get(self, request):
-        pass
-
-    def post(self, request):
-        pass
+    def get_queryset(self):
+        return None

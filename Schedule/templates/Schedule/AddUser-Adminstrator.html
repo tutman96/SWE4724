@@ -2,7 +2,7 @@
 <html>
 {% load staticfiles %}
   <head>
-    <link rel= "stylesheet" type="text/css" href="style.css">
+    <link rel= "stylesheet" type="text/css" href="{% static 'Schedule/style.css' %}">
   </head>
   <body>
   </body>
@@ -11,14 +11,25 @@
   </div>
   <div id="buttonsMenu">
   <ul>
-    <li>
-      <a id="Home" href="{% static 'Schedules/images/triangle.jpg' %}" style="position:fixed;top:140px; left:0px; z-index:60;">
+      <a href="{% url 'Schedule:ahome' %}">
+        <li id="Home" href="{% url 'Schedule:ahome' %}" style="position:fixed;top:140px; left:0px; z-index:60;">
+        </li>
       </a>
-    </li>
-    <li>
-      <a id="Reports" href="{% url 'Schedule:reports' %}" style="position:fixed;top:180px; left:0px; z-index:60;">
+
+      <a href="{% url 'Schedule:rhome' %}">
+        <li id="ReceptionistButton" href="{% url 'Schedule:rhome' %}" style="position:fixed;top:180px; left:0px; z-index:60;">
+        </li>
       </a>
-    </li>
+
+      <a href="{% url 'Schedule:ahome' %}">
+        <li id="PratitionerButton" href="{% url 'Schedule:ahome' %}" style="position:fixed;top:220px;left:0px;z-index:60;">
+        </li>
+      </a>
+
+      <a href="{% url 'Schedule:register' %}">
+        <li id="AddUsersButton" href="{% url 'Schedule:register' %}" style="position:fixed;top:260px;left:0px;z-index:60;">
+        </li>
+      </a>
   </ul>
 
   </div>
@@ -94,18 +105,6 @@ onblur="this.value=this.value=''?'Password'?'':this.Password;">
         <th align="left">PERMISSION/USER STATUS</th>
       </tr>
       <tr>
-        <td bgcolor="#ffffff" ><span style="color:#14a4eb;">Jorge Castillo</span>
-        </td>
-        <td bgcolor="#ffffff">
-          Jorge@gmail.com
-        </td>
-        <td bgcolor="#ffffff">
-          Phys.Md/DD
-        </td>
-        <td bgcolor="#ffffff">
-          Admin
-          Status
-        </td>
         <button style="position:fixed;right:5%;top:265px" class="SaveButton">
           Deactivate
         </button>
