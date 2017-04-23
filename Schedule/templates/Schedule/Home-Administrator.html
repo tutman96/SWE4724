@@ -25,17 +25,17 @@
         <ul>
           <li><img id="HelpPicture" src="{% static 'Schedule/images/HelpSymbol.jpg' %}"><a id="Help" href="#Lock">Help</a></li>
           <li><img id="SettingsPicture" src="{% static 'Schedule/images/settings.jpg' %}"><a id="Settings" href="#Settings">Settings</a></li>
-          <li><img id="LogOutPicture" src="{% static 'Schedule/images/logoutSymbol.jpg' %}"> <a id="LogOut" href="#Log Out">Log Out</a></li>
+          <li><img id="LogOutPicture" src="{% static 'Schedule/images/logoutSymbol.jpg' %}"> <a id="LogOut" href="#LogOut">Log Out</a></li>
           <li><img id="LockPicture" src="{% static 'Schedule/images/lockSymbol.jpg' %}"><a id="Lock" href="#Lock">Lock</a></li>
         </ul>
       </div>
     </div>
     <div  class="bottomMenu">
-      <a id="AddUsers" href="{% url Schedule:register %}" style="position:absolute; top:32px; left:120px;">Receptionist DashBoard</a>
+      <a id="AddUsers" href="{% url 'Schedule:register' %}" style="position:absolute; top:32px; left:120px;">Receptionist DashBoard</a>
       <button id="ReportList">
       </button>
       <div class="Buttons">
-        <img src="{% static 'Schedule/images/PractitionerNavigation.jpg' %}k" id="Reports">
+        <img src="{% static 'Schedule/images/PractitionerNavigation.jpg' %}" id="Reports">
         <button class="ShowReport" id="GenerateReports" style="position:absolute;                           top:265px;                             left:130px;">
           Practitioner Navigation
         </button>

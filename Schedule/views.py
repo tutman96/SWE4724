@@ -34,7 +34,7 @@ class ReceptionistHome(generic.ListView):
 
 
 class AdminHome(generic.ListView):
-    template_name = 'Schedule/Home-Adminstrator.html'
+    template_name = 'Schedule/Home-Administrator.html'
 
     def get_queryset(self):
         return None

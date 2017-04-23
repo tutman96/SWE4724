@@ -14,13 +14,11 @@
           <li id="Home" style="position:fixed;top:140px; left:0px; z-index:60;" onclick="location.href='templates/Schedule/Home-Receptionist.html'">
           </li>
         </a>
-       <a href="ReportPage-Receptionist.html">
+       <a href="{% url 'Schedule:rreports' %}">
          <li id="ReportsButton" href="{% url 'Schedule:rreports' %}" style="position:fixed;top:180px; left:0px; z-index:60;">
          </li>
         </a>
         <li id="ScheduleButton" href="{% url 'Schedule:rreports' %}" style="position:fixed;top:220px;left:0px;z-index:60;">
-        </li>
-        <li id="AddUsersButton" href="{% url 'Schedule:rreports' %}" style="position:fixed;top:260px;left:0px;z-index:60;">
         </li>
       </ul>
 
@@ -48,19 +46,19 @@
             Show Report
           </button>
         </a>
-        <a href="{% url 'Schedule:reminder'">
+        <a href="{% url 'Schedule:rreminder' %}">
           <img src="{% static 'Schedule/images/AppointmentReminders.jpg' %}" id="AppointmentList">
           <button class="ShowReport" id="AppointmentList" style="position:absolute;                           top:277px;                             left:530px;">
             Show Report
           </button>
         </a>
-        <a href="MissedAppointments-Receptionist.html">
+        <a href="{% url 'Schedule:rmissed' %}">
           <img src="{% static 'Schedule/images/MissedAppointments.jpg' %}" id="MissedAppointmentList">
           <button class="ShowReport" id="MissedAppointments" style="position:absolute;                           top:277px;                             left:920px;">
             Show Report
           </button>
         </a>
-        <a href="AppointmentList-Receptionist.html">
+        <a href="{% url 'Schedule:receptionist' %}">
           <img src="{% static 'Schedule/images/HistoryOfAppointments.jpg' %}" id="HistoryOfAppointments">
           <button class="ShowReport" id="HisAppointments" style="position:absolute;top:502px;left:140px;">
             Show Report
