@@ -96,6 +96,27 @@ class ReceptionistAppointmentReminder(generic.ListView):
         return None
 
 
+class ReceptionistAddPatient(generic.ListView):
+    template_name = 'Schedule/AddUsers-Receptionist.html'
+
+    def get_queryset(self):
+        return None
+
+
+class ReceptionistPatientView(generic.ListView):
+    template_name = 'Schedule/PatientProfile-Receptionist.html'
+
+    def get_queryset(self):
+        return None
+
+
+class ReceptionistPatientsView(generic.ListView):
+    template_name = 'Schedule/PatientProfiles-Receptionist.html'
+
+    def get_queryset(self):
+        return None
+
+
 class AdminRegister(View):
     template_name = 'Schedule/AddUser-Adminstrator.html'
 

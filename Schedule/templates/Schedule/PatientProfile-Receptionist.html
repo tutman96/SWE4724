@@ -1,10 +1,16 @@
 <html>
 {% load staticfiles %}
   <head>
-    <link rel= "stylesheet" type="text/css" href="{% static 'Schedule/HomeStyle.css' %}">
+    <link rel= "stylesheet" type="text/css" href="{% static 'Schedule/PatientList.css' %}">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
   </head>
-  <body style="background-color:#dfdfdf">
+  <body style="background-color:#white">
+
     <div id="mySidenav" >
+
     </div>
     <div class="buttonsMenu">
       <ul>
@@ -29,13 +35,13 @@
             </li>
           </a>
 
-          <a href="{% url 'Schedule:rpatients' %}">
+          <a href="{% url 'Schedule:rpatient' %}">
             <li id="PatientProfiles" href="{% url 'Schedule:rpatients' %}" style="position:fixed;top:300px;left:0px;z-index:60;">
             </li>
           </a>
 
-
       </ul>
+
     </div>
     <div id="TopMenu" class="TopMenu">
       <a class="CurrentUser"> User:Receptionist</a>
@@ -43,39 +49,20 @@
         <ul>
           <li><img id="HelpPicture" src="{% static 'Schedule/images/HelpSymbol.jpg' %}"><a id="Help" href="#Lock">Help</a></li>
           <li><img id="SettingsPicture" src="{% static 'Schedule/images/settings.jpg' %}"><a id="Settings" href="#Settings">Settings</a></li>
-          <li><img id="LogOutPicture" src="{% static 'Schedule/images/logoutSymbol.jpg' %}"> <a id="LogOut" href="#LogOut">Log Out</a></li>
+          <li><img id="LogOutPicture" src="{% static 'Schedule/images/logoutSymbol.jpg' %}"> <a id="LogOut" href="#Log Out">Log Out</a></li>
           <li><img id="LockPicture" src="{% static 'Schedule/images/lockSymbol.jpg' %}"><a id="Lock" href="#Lock">Lock</a></li>
         </ul>
       </div>
     </div>
     <div  class="bottomMenu">
-      <a id="AddUsers" href="Add Users" style="position:absolute; top:32px; left:120px;">Receptionist DashBoard</a>
-      <button id="ReportList">
-      </button>
-      <div class="Buttons">
-
-        <img src="{% static 'Schedule/images/ReportNavigations.jpg' %}" id="Reports">
-        <a href="{% url 'Schedule:rreports' %}">
-        <button class="ShowReport" id="GenerateReports" style="position:absolute;                           top:265px;                             left:130px;">
-          Generate Reports
-        </button>
-        </a>
-
-        <img src="{% static 'Schedule/images/PatientProfile.jpg' %}" id="AddUsers">
-        <a href="{% url 'Schedule:rpatients' %}">
-        <button class="ShowReport" id="Add Patients" style="position:absolute;                           top:265px;                             left:912px;z-index:40">
-          Patient Profiles
-        </button>
-        </a>
-
-        <img src="{% static 'Schedule/images/ScheduleNavigationButton.jpg' %}" id="Schedule">
-        <a href="{% url 'Schedule:rhome' %}">
-        <button class="ShowReport" id="Schedule" style="position:absolute;                           top:265px;                             left:522px;">
-          Schedules
-        </button>
-        </a>
-
-      </div>
+      <a id="AddUsers" href="{% url 'Schedule:rpatient' %}" style="position:absolute; top:32px; left:120px;">Patient Profile</a>
     </div>
+    <div class="FilterMenu">
+      
+    </div>
+   
+
+
+
   </body>
 </html>

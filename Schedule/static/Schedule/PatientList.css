@@ -36,6 +36,14 @@
 #ReportsButton{
   padding: 20px 50px;
   transition: 0.3s;
+  background-image:url("Images/ReportsSymbolBlack.jpg");
+  background-size: 100px;
+  background-repeat: no-repeat;
+  z-index: 60;
+}
+#ReportsButton:hover{
+  padding: 20px 50px;
+  transition: 0.3s;
   background-image:url("Images/ReportsSymbolBlue.jpg");
   background-size: 100px;
   background-repeat: no-repeat;
@@ -65,25 +73,6 @@
   background-repeat: no-repeat;
   z-index: 60;
 }
-
-#PatientProfiles{
-  padding: 20px 50px;
-  transition: 0.3s;
-  background-image:url("Images/PatientsBlack.jpg");
-  background-size: 100px;
-  background-repeat: no-repeat;
-  z-index: 60;
-}
-
-#PatientProfiles:hover{
-  padding: 20px 50px;
-  transition: 0.3s;
-  background-image:url("Images/PatientsBlue.jpg");
-  background-size: 100px;
-  background-repeat: no-repeat;
-  z-index: 60;
-}
-
 #ScheduleButton{
   padding: 20px 50px;
   transition: 0.3s;
@@ -116,14 +105,31 @@
   background-repeat: no-repeat;
   z-index: 60;
 }
-#Reports{
+#PatientList{
   padding: 20px 50px;
   transition: 0.3s;
-  background-image:url("Images/ReportsSymbolBlue.jpg");
+  background-image:url("Images/PatientProfile.jpg");
   background-size: 100px;
   background-repeat: no-repeat;
   z-index: 60;
 }
+#Reports{
+  padding: 20px 50px;
+  transition: 0.3s;
+  background-image:url("Images/PatientsBlack.jpg");
+  background-size: 100px;
+  background-repeat: no-repeat;
+  z-index: 60;
+}
+#PatientProfiles{
+  padding: 20px 50px;
+  transition: 0.3s;
+  background-image:url("Images/PatientsBlue.jpg");
+  background-size: 100px;
+  background-repeat: no-repeat;
+  z-index: 60;
+}
+
 #AddUsers{
   font-family: Verdana;
   text-decoration: none;
@@ -150,9 +156,9 @@
   z-index: 10;
 }
 .bottomMenu{
-  position:absolute;
+  position:fixed;
   background-color:#14a4eb;
-  height:80px;
+  height:13%;
   min-width: 100%;
   top:50px;
   right:1px;
@@ -255,12 +261,12 @@
 }
 #AppointmentList{
   position:absolute;
-  top:95px;
+  top:115px;
   left:510px;
 }
 #MissedAppointmentList{
   position:absolute;
-  top:95px;
+  top:115px;
   left:900px;
 }
 #ReportList{
@@ -279,7 +285,7 @@
   font-family: Verdana;
   font-size:11px;
   left:100px;
-  width:1258px;
+  width:100%;
   border-collapse: collapse;
   background:#d6d6d6;
 }
@@ -296,9 +302,9 @@
   top:150px;
   left:105px;
   z-index: 50;
-  width:700px;
+  width:300px;
   background-image:url("Images/SearchIcon-0100.png");
-  background-position: 675px;
+  background-position: 280px;
   background-repeat: no-repeat;
   background-size: 25px;
 }
@@ -355,4 +361,66 @@
 .Submit:hover{
   opacity: 0.9;
 }
-<style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
+.emb-view-fix-colum{
+  position:relative;
+  top:180px;
+  left:130px;
+}
+.ScheduledButton{
+  font-family:Verdana;
+  font-size:13px;
+  border:none;
+  text-align: center;
+  color:grey;
+  background-color:white;
+  padding: 5px 15px;
+  border: 2px solid #555555;
+}
+.ScheduledButton:hover{
+  font-family:Verdana;
+  font-size:13px;
+  border:none;
+  text-align: center;
+  color:white;
+  background-color:#14a4eb;
+  padding: 5px 15px;
+  border: 2px solid #555555;
+}
+.RecentButton{
+  font-family:Verdana;
+  font-size:13px;
+  border:none;
+  text-align: center;
+  color:white;
+  background-color:#14a4eb;
+  padding: 5px 15px;
+  border: 2px solid #555555;
+}
+.AddPatient{
+  font-family:Verdana;
+  font-size:13px;
+  border:none;
+  text-align: center;
+  color:white;
+  background-color:;
+  padding: 5px 15px;
+  border: 2px solid #555555;
+  
+}
+.AddPatient{
+  font-family:Verdana;
+  font-size:13px;
+  border:none;
+  text-align: center;
+  color:white;
+  background-color:#ff9326;
+  padding: 5px 15px;
+}
+.AddPatient:hover{
+  opacity: 0.9;
+}
+.AddPatient:active{
+  background-color: #ff9326;
+  box-shadow: 0 1px #666;
+  transform: translateY(1px);
+}

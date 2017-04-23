@@ -15,17 +15,29 @@
     <div class="buttonsMenu">
       <ul>
         <a href="{% url 'Schedule:rhome' %}">
-          <li id="Home" href="[% url 'Schedule:rhome' %}" style="position:fixed;top:140px; left:0px; z-index:60;">
+          <li id="Home" href="{% url 'Schedule:rhome' %}" style="position:fixed;top:140px; left:0px; z-index:60;">
           </li>
         </a>
-        <a href="ReportPage-Receptionist.html">
+
+        <a href="{% url 'Schedule:rreports' %}">
           <li id="ReportsButton" href="{% url 'Schedule:rreports' %}" style="position:fixed;top:180px; left:0px; z-index:60;">
           </li>
         </a>
-        <li id="ScheduleButton" href="{% url 'Schedule:rreports' %}" style="position:fixed;top:220px;left:0px;z-index:60;">
-        </li>
-        <li id="AddUsersButton" href="{% url 'Schedule:rreports' %}" style="position:fixed;top:260px;left:0px;z-index:60;">
-        </li>
+
+        <a href="{% url 'Schedule:rhome' %}">
+          <li id="ScheduleButton" href="{% url 'Schedule:rhome' %}" style="position:fixed;top:220px;left:0px;z-index:60;">
+          </li>
+        </a>
+
+          <a href="{% url 'Schedule:raddpatient' %}">
+            <li id="AddUsersButton" href="{% url 'Schedule:raddpatient' %}" style="position:fixed;top:260px;left:0px;z-index:60;">
+            </li>
+          </a>
+
+          <a href="{% url 'Schedule:rpatients' %}">
+            <li id="PatientProfiles" href="{% url 'Schedule:rpatients' %}" style="position:fixed;top:300px;left:0px;z-index:60;">
+            </li>
+          </a>
       </ul>
 
     </div>

@@ -1,14 +1,19 @@
 <html>
 {% load staticfiles %}
   <head>
-    <link rel= "stylesheet" type="text/css" href="{% static 'Schedule/HomeStyle.css' %}">
+    <link rel= "stylesheet" type="text/css" href="{% static 'Schedule/PatientList.css' %}">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
   </head>
-  <body style="background-color:#dfdfdf">
+  <body style="background-color:#white">
+
     <div id="mySidenav" >
+
     </div>
     <div class="buttonsMenu">
       <ul>
-
         <a href="{% url 'Schedule:rhome' %}">
           <li id="Home" href="{% url 'Schedule:rhome' %}" style="position:fixed;top:140px; left:0px; z-index:60;">
           </li>
@@ -33,9 +38,8 @@
             <li id="PatientProfiles" href="{% url 'Schedule:rpatients' %}" style="position:fixed;top:300px;left:0px;z-index:60;">
             </li>
           </a>
-
-
       </ul>
+
     </div>
     <div id="TopMenu" class="TopMenu">
       <a class="CurrentUser"> User:Receptionist</a>
@@ -49,33 +53,37 @@
       </div>
     </div>
     <div  class="bottomMenu">
-      <a id="AddUsers" href="Add Users" style="position:absolute; top:32px; left:120px;">Receptionist DashBoard</a>
-      <button id="ReportList">
-      </button>
-      <div class="Buttons">
-
-        <img src="{% static 'Schedule/images/ReportNavigations.jpg' %}" id="Reports">
-        <a href="{% url 'Schedule:rreports' %}">
-        <button class="ShowReport" id="GenerateReports" style="position:absolute;                           top:265px;                             left:130px;">
-          Generate Reports
-        </button>
-        </a>
-
-        <img src="{% static 'Schedule/images/PatientProfile.jpg' %}" id="AddUsers">
-        <a href="{% url 'Schedule:rpatients' %}">
-        <button class="ShowReport" id="Add Patients" style="position:absolute;                           top:265px;                             left:912px;z-index:40">
-          Patient Profiles
-        </button>
-        </a>
-
-        <img src="{% static 'Schedule/images/ScheduleNavigationButton.jpg' %}" id="Schedule">
-        <a href="{% url 'Schedule:rhome' %}">
-        <button class="ShowReport" id="Schedule" style="position:absolute;                           top:265px;                             left:522px;">
-          Schedules
-        </button>
-        </a>
-
-      </div>
+      <a id="AddUsers" href="{% url 'Schedule:rpatients' %}" style="position:absolute; top:32px; left:120px;">Patient Profiles</a>
     </div>
+<div class="FilterMenu">
+    <input type="text" id="SearchBar" onkeyup="myFunction()" placeholder="Search for patients.." title="Type in a name">
+  <buton class ="RecentButton" style="position:absolute;top:21%;left:37%;z-index:40;">
+    Recent 
+  </buton>
+  <buton class ="ScheduledButton" style="position:absolute;top:21%;left:30%;z-index:40;">
+    Scheduled 
+  </buton>
+  <buton class ="ScheduledButton" style="position:absolute;top:21%;left:30%;z-index:40;">
+    Scheduled 
+  </buton>
+  <buton class ="AddPatient" style="position:absolute;top:21%;right:10%;z-index:40;">
+    Apply 
+  </buton>
+    </div>
+    <div class="ContextBrowser">
+    <table border="0" class="UserTable">
+      <tr>
+        <th align="center" id="date" width="12%">First</th>
+        <th align="left" id="Time" width="15%">LastName</th>
+        <th align="left" id="PatientsName" width="30%">DOB</th>
+        <th align="left" id="Pratitioner" width="30%">Contact Info</th>
+        <th align="left" id="Pratitioner" width="30%">Accessed</th>
+      </tr>
+      </table>
+    </div>
+       
+      
+  
+
   </body>
 </html>

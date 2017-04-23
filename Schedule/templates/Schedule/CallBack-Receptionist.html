@@ -16,14 +16,26 @@
           <li id="Home" href="{% url 'Schedule:rhome' %}" style="position:fixed;top:140px; left:0px; z-index:60;">
           </li>
         </a>
-        <a href="ReportPage-Receptionist.html">
-          <li id="ReportsButton" href="{% url 'Schedule:reports' %}" style="position:fixed;top:180px; left:0px; z-index:60;">
+
+        <a href="{% url 'Schedule:rreports' %}">
+          <li id="ReportsButton" href="{% url 'Schedule:rreports' %}" style="position:fixed;top:180px; left:0px; z-index:60;">
           </li>
         </a>
-        <li id="ScheduleButton" href="{% url 'Schedule:reports' %}" style="position:fixed;top:220px;left:0px;z-index:60;">
-        </li>
-        <li id="AddUsersButton" href="{% url 'Schedule:reports' %}" style="position:fixed;top:260px;left:0px;z-index:60;">
-        </li>
+
+        <a href="{% url 'Schedule:rhome' %}">
+          <li id="ScheduleButton" href="{% url 'Schedule:rhome' %}" style="position:fixed;top:220px;left:0px;z-index:60;">
+          </li>
+        </a>
+
+          <a href="{% url 'Schedule:raddpatient' %}">
+            <li id="AddUsersButton" href="{% url 'Schedule:raddpatient' %}" style="position:fixed;top:260px;left:0px;z-index:60;">
+            </li>
+          </a>
+
+          <a href="{% url 'Schedule:rpatients' %}">
+            <li id="PatientProfiles" href="{% url 'Schedule:rpatients' %}" style="position:fixed;top:300px;left:0px;z-index:60;">
+            </li>
+          </a>
       </ul>
 
     </div>
@@ -32,9 +44,9 @@
       <div id="SettingsMenu">
         <ul>
           <li><img id="HelpPicture" src="{% static 'Schedule/images/HelpSymbol.jpg' %}"><a id="Help" href="#Lock">Help</a></li>
-          <li><img id="SettingsPicture" src="{% static Schedule/images/settings.jpg' %}"><a id="Settings" href="#Settings">Settings</a></li>
-          <li><img id="LogOutPicture" src="{% static 'Schedule/images/logoutSymbol.jpg %}"> <a id="LogOut" href="#Log Out">Log Out</a></li>
-          <li><img id="LockPicture" src="{% static 'Schedule/images/lockSymbol.jpg %}"><a id="Lock" href="#Lock">Lock</a></li>
+          <li><img id="SettingsPicture" src="{% static 'Schedule/images/settings.jpg' %}"><a id="Settings" href="#Settings">Settings</a></li>
+          <li><img id="LogOutPicture" src="{% static 'Schedule/images/logoutSymbol.jpg' %}"> <a id="LogOut" href="#LogOut">Log Out</a></li>
+          <li><img id="LockPicture" src="{% static 'Schedule/images/lockSymbol.jpg' %}"><a id="Lock" href="#Lock">Lock</a></li>
         </ul>
       </div>
     </div>

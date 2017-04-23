@@ -36,6 +36,14 @@
 #ReportsButton{
   padding: 20px 50px;
   transition: 0.3s;
+  background-image:url("Images/ReportsSymbolBlack.jpg");
+  background-size: 100px;
+  background-repeat: no-repeat;
+  z-index: 60;
+}
+#ReportsButton:hover{
+  padding: 20px 50px;
+  transition: 0.3s;
   background-image:url("Images/ReportsSymbolBlue.jpg");
   background-size: 100px;
   background-repeat: no-repeat;
@@ -65,25 +73,6 @@
   background-repeat: no-repeat;
   z-index: 60;
 }
-
-#PatientProfiles{
-  padding: 20px 50px;
-  transition: 0.3s;
-  background-image:url("Images/PatientsBlack.jpg");
-  background-size: 100px;
-  background-repeat: no-repeat;
-  z-index: 60;
-}
-
-#PatientProfiles:hover{
-  padding: 20px 50px;
-  transition: 0.3s;
-  background-image:url("Images/PatientsBlue.jpg");
-  background-size: 100px;
-  background-repeat: no-repeat;
-  z-index: 60;
-}
-
 #ScheduleButton{
   padding: 20px 50px;
   transition: 0.3s;
@@ -100,15 +89,23 @@
   background-repeat: no-repeat;
   z-index: 60;
 }
-#AddUsersButton{
+#PatientList{
   padding: 20px 50px;
   transition: 0.3s;
-  background-image:url("Images/AddUsersBlack.jpg");
+  background-image:url("Images/PatientsBlack.jpg");
   background-size: 100px;
   background-repeat: no-repeat;
   z-index: 60;
 }
-#AddUsersButton:hover{
+#PatientList:hover{
+  padding: 20px 50px;
+  transition: 0.3s;
+  background-image:url("Images/PatientsBlue.jpg");
+  background-size: 100px;
+  background-repeat: no-repeat;
+  z-index: 60;
+}
+#AddUsersButton{
   padding: 20px 50px;
   transition: 0.3s;
   background-image:url("Images/AddUsersWhite.jpg");
@@ -150,9 +147,9 @@
   z-index: 10;
 }
 .bottomMenu{
-  position:absolute;
+  position:fixed;
   background-color:#14a4eb;
-  height:80px;
+  height:13%;
   min-width: 100%;
   top:50px;
   right:1px;
@@ -244,6 +241,25 @@
   box-shadow: 0 1px #666;
   transform: translateY(1px);
 }
+
+#PatientProfiles{
+  padding: 20px 50px;
+  transition: 0.3s;
+  background-image:url("Images/PatientsBlack.jpg");
+  background-size: 100px;
+  background-repeat: no-repeat;
+  z-index: 60;
+}
+
+#PatientProfiles:hover{
+  padding: 20px 50px;
+  transition: 0.3s;
+  background-image:url("Images/PatientsBlue.jpg");
+  background-size: 100px;
+  background-repeat: no-repeat;
+  z-index: 60;
+}
+
 .ButtonsAppointment{
   font-family:Verdana;
   font-size:13px;
@@ -356,3 +372,9 @@
   opacity: 0.9;
 }
 <style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
+.registrationform{
+  background-color:#14a4eb;
+}
+.label{
+  display:block;
+}

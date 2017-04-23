@@ -34,4 +34,10 @@ urlpatterns = [
 
     url(r'^admin/AppointmentReminder/$', views.AdminAppointmentReminder.as_view(), name='areminder'),
 
+    url(r'^receptionist/NewPatient/$', views.ReceptionistAddPatient.as_view(), name='raddpatient'),
+
+    url(r'^receptionist/PatientView/$', views.ReceptionistPatientView.as_view(), name='rpatient'),
+
+    url(r'^receptionist/PatientsList/$', views.ReceptionistPatientsView.as_view(), name='rpatients'),
+
 ]
