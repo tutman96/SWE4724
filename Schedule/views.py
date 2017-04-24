@@ -111,7 +111,8 @@ class ReceptionistPatientsView(generic.ListView):
     template_name = 'Schedule/PatientProfiles-Receptionist.html'
 
     def get_queryset(self):
-        return Patient.objects.all()
+        patients = Patient.objects.all()
+        return patients
 
 
 class AdminRegister(generic.ListView):

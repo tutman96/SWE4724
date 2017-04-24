@@ -80,18 +80,18 @@
         <th align="left" id="Pratitioner" width="30%">Last Appointment</th>
 
       </tr>
+      {% for patient in patients %}
       <tr bgcolor="white">
-        <td align="center" width="12%">JOE</td>
-        <td align="left" width="15%">DART</td>
-        <td align="left" width="20%">12/12/12</td>
-        <td align="left" width="30%">email@email.com</td>
-        <td align="left" width="30%">12/12/17</td>
+        <td align="center" width="12%">{{patient.firstName}}</td>
+        <td align="left" width="15%">{{patient.lastName}}</td>
+        <td align="left" width="20%">{{patient.dob}}</td>
+        <td align="left" width="30%">{{patient.email}}</td>
+        <td align="left" width="30%">{{patient.dob}}</td>
       </tr>
+      {% endfor %}
       </table>
     </div>
-       
-      
-  
+
 
   </body>
 </html>

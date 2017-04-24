@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="e7d78c31-2eef-4995-b691-900b7f0b288f" name="Default" comment="" />
+=======
+    <list default="true" id="e7d78c31-2eef-4995-b691-900b7f0b288f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Schedule/models.py" afterPath="$PROJECT_DIR$/Schedule/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Schedule/templates/Schedule/PatientProfiles-Receptionist.html" afterPath="$PROJECT_DIR$/Schedule/templates/Schedule/PatientProfiles-Receptionist.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Schedule/views.py" afterPath="$PROJECT_DIR$/Schedule/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+    </list>
+>>>>>>> ffdafe7d56d68526475d27a9a4d1cd00a716e65a
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,8 +37,13 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Schedule/views.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="786">
               <caret line="113" column="36" lean-forward="false" selection-start-line="113" selection-start-column="36" selection-end-line="113" selection-end-column="36" />
+=======
+            <state relative-caret-position="312">
+              <caret line="112" column="27" lean-forward="true" selection-start-line="112" selection-start-column="27" selection-end-line="112" selection-end-column="27" />
+>>>>>>> ffdafe7d56d68526475d27a9a4d1cd00a716e65a
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -38,6 +52,7 @@
         </entry>
       </file>
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/Accounts/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
@@ -54,16 +69,30 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-213">
               <caret line="12" column="44" lean-forward="true" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+=======
+        <entry file="file://$PROJECT_DIR$/Schedule/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+>>>>>>> ffdafe7d56d68526475d27a9a4d1cd00a716e65a
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="PatientProfiles-Receptionist.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Schedule/templates/Schedule/PatientProfiles-Receptionist.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1320">
               <caret line="88" column="11" lean-forward="false" selection-start-line="88" selection-start-column="11" selection-end-line="88" selection-end-column="11" />
+=======
+      <file leaf-file-name="PatientProfiles-Receptionist.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Schedule/templates/Schedule/PatientProfiles-Receptionist.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="87" column="59" lean-forward="true" selection-start-line="87" selection-start-column="59" selection-end-line="87" selection-end-column="59" />
+>>>>>>> ffdafe7d56d68526475d27a9a4d1cd00a716e65a
               <folding />
             </state>
           </provider>
@@ -101,9 +130,10 @@
         <option value="$PROJECT_DIR$/Schedule/static/Schedule/PatientList.css" />
         <option value="$PROJECT_DIR$/Schedule/static/Schedule/HomeAdministrator.css" />
         <option value="$PROJECT_DIR$/Schedule/static/Schedule/AddUsers.css" />
-        <option value="$PROJECT_DIR$/Schedule/templates/Schedule/PatientProfiles-Receptionist.html" />
         <option value="$PROJECT_DIR$/Accounts/views.py" />
+        <option value="$PROJECT_DIR$/Schedule/models.py" />
         <option value="$PROJECT_DIR$/Schedule/views.py" />
+        <option value="$PROJECT_DIR$/Schedule/templates/Schedule/PatientProfiles-Receptionist.html" />
       </list>
     </option>
   </component>
@@ -114,9 +144,15 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
     <option name="x" value="171" />
     <option name="y" value="105" />
     <option name="width" value="642" />
+=======
+    <option name="x" value="-1" />
+    <option name="y" value="27" />
+    <option name="width" value="1282" />
+>>>>>>> ffdafe7d56d68526475d27a9a4d1cd00a716e65a
     <option name="height" value="774" />
   </component>
   <component name="ProjectView">
@@ -375,10 +411,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="171" y="105" width="642" height="774" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27258566" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
+    <frame x="-1" y="27" width="1282" height="774" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20859376" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> ffdafe7d56d68526475d27a9a4d1cd00a716e65a
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -462,6 +505,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1780">
           <caret line="89" column="28" lean-forward="false" selection-start-line="89" selection-start-column="28" selection-end-line="89" selection-end-column="28" />
+<<<<<<< HEAD
+=======
+          <folding>
+            <element signature="e#0#32#0" expanded="false" />
+          </folding>
+>>>>>>> ffdafe7d56d68526475d27a9a4d1cd00a716e65a
         </state>
       </provider>
     </entry>
@@ -476,6 +525,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1380">
           <caret line="69" column="22" lean-forward="false" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="22" />
+<<<<<<< HEAD
+=======
+          <folding>
+            <element signature="e#0#32#0" expanded="false" />
+          </folding>
+>>>>>>> ffdafe7d56d68526475d27a9a4d1cd00a716e65a
         </state>
       </provider>
     </entry>
@@ -497,6 +552,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+<<<<<<< HEAD
+=======
+          <folding>
+            <element signature="e#0#32#0" expanded="false" />
+          </folding>
+>>>>>>> ffdafe7d56d68526475d27a9a4d1cd00a716e65a
         </state>
       </provider>
     </entry>
@@ -720,6 +781,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Schedule/templates/Schedule/PatientProfiles-Receptionist.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1320">
@@ -728,6 +790,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> ffdafe7d56d68526475d27a9a4d1cd00a716e65a
     <entry file="file://$PROJECT_DIR$/Accounts/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -740,25 +804,47 @@
         <state relative-caret-position="786">
           <caret line="113" column="36" lean-forward="false" selection-start-line="113" selection-start-column="36" selection-end-line="113" selection-end-column="36" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Accounts/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+=======
+    <entry file="file://$PROJECT_DIR$/Schedule/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Schedule/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="112" column="27" lean-forward="true" selection-start-line="112" selection-start-column="27" selection-end-line="112" selection-end-column="27" />
+>>>>>>> ffdafe7d56d68526475d27a9a4d1cd00a716e65a
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Schedule/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-213">
           <caret line="12" column="44" lean-forward="true" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+=======
+    <entry file="file://$PROJECT_DIR$/Schedule/templates/Schedule/PatientProfiles-Receptionist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="87" column="59" lean-forward="true" selection-start-line="87" selection-start-column="59" selection-end-line="87" selection-end-column="59" />
+>>>>>>> ffdafe7d56d68526475d27a9a4d1cd00a716e65a
           <folding />
         </state>
       </provider>
