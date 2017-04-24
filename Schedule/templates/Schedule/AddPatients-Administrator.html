@@ -1,0 +1,269 @@
+<html>
+  <head>
+    <link rel= "stylesheet" type="text/css" href="AddUsers.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+    <style>*, *:before, *:after {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+      body {
+        font-family: 'Nunito', sans-serif;
+        color: #384047;
+      }
+
+      form {
+        max-width: 300px;
+        margin: 10px auto;
+        padding: 10px 20px;
+        background: #f4f7f8;
+        border-radius: 8px;
+      }
+
+      h1 {
+        margin: 0 0 30px 0;
+        text-align: center;
+      }
+
+      input[type="text"],
+      input[type="password"],
+      input[type="date"],
+      input[type="datetime"],
+      input[type="email"],
+      input[type="number"],
+      input[type="search"],
+      input[type="tel"],
+      input[type="time"],
+      input[type="url"],
+      input[type="datetime-local"],
+      textarea,
+      select {
+        background: rgba(255,255,255,0.1);
+        border: none;
+        font-size: 16px;
+        height: auto;
+        margin: 0;
+        outline: 0;
+        padding: 15px;
+        width: 100%;
+        background-color: #e8eeef;
+        color: #8a97a0;
+        box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+        margin-bottom: 30px;
+      }
+
+      input[type="radio"],
+      input[type="checkbox"] {
+        margin: 0 4px 8px 0;
+      }
+
+      select {
+        padding: 6px;
+        height: 32px;
+        border-radius: 2px;
+      }
+
+      button {
+        padding: 19px 39px 18px 39px;
+        color: #FFF;
+        background-color: #4bc970;
+        font-size: 18px;
+        text-align: center;
+        font-style: normal;
+        border-radius: 5px;
+        width: 100%;
+        border: 1px solid #3ac162;
+        border-width: 1px 1px 3px;
+        box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+        margin-bottom: 10px;
+      }
+
+      fieldset {
+        margin-bottom: 30px;
+        border: none;
+      }
+
+      legend {
+        font-size: 1.4em;
+        margin-bottom: 10px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      label.light {
+        font-weight: 300;
+        display: inline;
+      }
+
+      .number {
+        background-color: #1480eb;
+        color: #fff;
+        height: 30px;
+        width: 30px;
+        display: inline-block;
+        font-size: 0.8em;
+        margin-right: 4px;
+        line-height: 30px;
+        text-align: center;
+        text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+        border-radius: 100%;
+      }
+
+      @media screen and (min-width: 480px) {
+
+        form {
+          max-width: 480px;
+        }
+
+      }</style>
+  </head>
+  <body style="background-color:#white">
+    <div id="mySidenav" >
+    </div>
+    <div class="buttonsMenu">
+      <ul>
+        <a href="Home-Receptionist.html">
+          <li id="Home" href="home" style="position:fixed;top:140px; left:0px; z-index:60;">
+          </li>
+        </a>
+        <a href="ReportPage-Receptionist.html">
+          <li id="ReportsButton" href="Reports" style="position:fixed;top:180px; left:0px; z-index:60;">
+          </li>
+        </a>
+        <li id="ScheduleButton" href="Reports" style="position:fixed;top:220px;left:0px;z-index:60;">
+        </li>
+        <a href="AddUsers-Receptionist.html">
+          <li id="AddUsersButton" href="Reports" style="position:fixed;top:260px;left:0px;z-index:60;">
+          </li>
+        </a>
+        <a href="PatientProfiles.html">
+          <li id="PatientList" href="Reports" style="position:fixed;top:300px;left:0px;z-index:60;"></li>
+        </a>
+      </ul>
+
+    </div>
+    <div id="TopMenu" class="TopMenu">
+      <a class="CurrentUser"> User:Receptionist</a>
+      <div id="SettingsMenu">
+        <ul>
+          <li><img id="HelpPicture" src="Images/HelpSymbol.jpg"><a id="Help" href="#Lock">Help</a></li> 
+          <li><img id="SettingsPicture" src="Images/settings.jpg"><a id="Settings" href="#Settings">Settings</a></li>
+          <li><img id="LogOutPicture" src="Images/logoutSymbol.jpg"> <a id="LogOut" href="#Log Out">Log Out</a></li>
+          <li><img id="LockPicture" src="Images/lockSymbol.jpg"><a id="Lock" href="#Lock">Lock</a></li> 
+        </ul>
+      </div>
+    </div>
+    <div  class="bottomMenu">
+      <a id="AddUsers" href="Add Users" style="position:fixed; top:12%; left:120px;z-index:0">Add Patients</a>
+    </div>
+    <div class="RegistrationForm" style="position:absolute;top:22%;left:50%">  
+      <h1 href="Add Patient" class="PatientHeader">
+        Patient Information
+      </h1> 
+      <fieldset style="position:absolute;top:100px;width:300px;z-index:-40">
+        <legend><span class="number">1</span>Patient General Information</legend>
+        <label for="FirstName">First Name:</label>
+        <input type="text" id="FirstName" name="First Name:">
+        <br/>
+        <label for="LastName">Last Name:</label>
+        <input type="text" id="LastName" name="Last Name:">
+        <br/>
+        <label for="Gender">Gender:</label>
+        <select style="position;right:70px">
+          <option value=""></option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+        <br/>
+        <label for="Gender">Birthday:</label>
+        <input type="datetime-local" name="bdaytime">
+        <br/>
+        <label>Contact Number:
+        </label>
+        <input type="text" id="Contact Number">
+        <label>Marital Status:</label>
+        <select>
+          <option value=""></option>
+          <option value="Single">Single</option>
+          <option value="Married">Married</option>
+          <option value="Divorced">Divorced</option>
+        </select>
+        <label>Email ID:</label>
+        <input type="text" id="Email-ID">
+        <legend>
+          <span class="number">2</span>Medical History
+        </legend>
+        <label>Weight:</label>
+        <input id="Weight" type="number" placeholder="lbs" min="0" max="2000">
+        <label>Height:</label>
+        <input id="Weight" type="number" placeholder="cm" min="0" max="600">
+        <label>Diagnosis:</label>
+        <textarea name="diagnosis" placeholder="Where the pain problem lies?"></textarea>
+        <label>Pain Problem:</label>
+        <textarea name="Pain" placeholder="How long have you had this pain problem?">
+        </textarea>
+        <label>How severe is the pain problem on a scale of 1-5 with 5 being the most severe?</label>
+        <input type="radio" name="Pain" value="1">1<br>
+        <input type="radio" name="Pain" value="2">2<br>
+        <input type="radio" name="Pain" value="3">3<br>
+        <input type="radio" name="Pain" value="4">4<br>
+        <input type="radio" name="Pain" value="5">5<br>
+        <label>Does the problem occur at a specific time?</label>
+        <input type="radio" name="Time" value="1">Yes<br>
+        <input type="radio" name="Time" value="2">No<br>
+        <legend><span class="number">3</span>Past Medical History
+        </legend>
+        <label>Have you ever had one of the following?</label>
+        <input type="checkbox" name="Problems" value="Anemia">Anemia<br>
+        <input type="checkbox" name="Problems" value="Anemia">Arthritis<br>
+        <input type="checkbox" name="Problems" value="Anemia">Asthma<br>
+        <input type="checkbox" name="Problems" value="Anemia">Back Trouble<br>
+        <input type="checkbox" name="Problems" value="Anemia">Bladder Infections<br>
+        <input type="checkbox" name="Problems" value="Anemia">Bleeding Tendency<br>
+        <input type="checkbox" name="Problems" value="Anemia">ADHD/ADD<br>
+        <input type="checkbox" name="Problems" value="Anemia">Bladder Infections<br>
+        <input type="checkbox" name="Problems" value="Anemia">Leg Swelling<br>
+        <input type="checkbox" name="Problems" value="Anemia">Prostate<br>
+        <input type="checkbox" name="Problems" value="Anemia">Cholesterol<br>
+        <input type="checkbox" name="Problems" value="Anemia">Diabetes<br>
+        <input type="checkbox" name="Problems" value="Anemia">Sinus Infection<br>
+        <input type="checkbox" name="Problems" value="Anemia">Ulcers<br>
+        <input type="checkbox" name="Problems" value="Anemia">Warts<br>
+        <legend><span class="number">4</span>Patient Insurance Information
+        </legend>
+        <label>Plan's Name:</label>
+        <input type="text" id="PlanName" name="Plan Name">
+        <label>Insurance Name:</label>
+        <input type="text" id="PlanName" name="Plan Name">
+        <label>Insured's Social Security:</label>
+        <input type="text" id="PlanName" name="Plan Name">
+        <button class="AddButton"> Add   
+        </button>
+      </fieldset>
+    </div>
+  </body>
+</html>
+<script>
+  $(document).ready(function() {
+    $("#datepicker").datepicker();
+  });
+</script>
+<script>
+  $(document).ready(function(){
+    var date_input=$('input[name="date"]'); //our date input has the name "date"
+    var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+    date_input.datepicker({
+      format: 'mm/dd/yyyy',
+      container: container,
+      todayHighlight: true,
+      autoclose: true,
+    })
+  })
+</script>

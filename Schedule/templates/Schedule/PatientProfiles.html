@@ -1,62 +1,55 @@
 <html>
-{% load staticfiles %}
   <head>
-    <link rel= "stylesheet" type="text/css" href="{% static 'Schedule/Report.css' %}">
+    <link rel= "stylesheet" type="text/css" href="Report.css">
+    <link rel= "stylesheet" type="text/css" href="Report.css">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
   </head>
   <body style="background-color:#white">
+
     <div id="mySidenav" >
+
     </div>
     <div class="buttonsMenu">
       <ul>
-        <a href="{% url 'Schedule:rhome' %}">
-          <li id="Home" href="{% url 'Schedule:rhome' %}" style="position:fixed;top:140px; left:0px; z-index:60;">
+        <a href="Home-Receptionist.html">
+          <li id="Home" href="home" style="position:fixed;top:140px; left:0px; z-index:60;">
           </li>
         </a>
-
-        <a href="{% url 'Schedule:rreports' %}">
-          <li id="ReportsButton" href="{% url 'Schedule:rreports' %}" style="position:fixed;top:180px; left:0px; z-index:60;">
+        <a href="ReportPage-Receptionist.html">
+          <li id="ReportsButton" href="Reports" style="position:fixed;top:180px; left:0px; z-index:60;">
           </li>
         </a>
-
-        <a href="{% url 'Schedule:rschedule' %}">
-          <li id="ScheduleButton" href="{% url 'Schedule:rschedule' %}" style="position:fixed;top:220px;left:0px;z-index:60;">
+        <li id="ScheduleButton" href="Reports" style="position:fixed;top:220px;left:0px;z-index:60;">
+        </li>
+        <a href="AddUsers-Receptionist.html">
+        <li id="AddUsersButton" href="Reports" style="position:fixed;top:260px;left:0px;z-index:60;">
+        </li>
+        </a>
+        <a href="PatientProfiles.html">
+          <li id="PatientProfiles" href="Reports" style="position:fixed;top:300px;left:0px;z-index:60;">
           </li>
         </a>
-
-          <a href="{% url 'Schedule:raddpatient' %}">
-            <li id="AddUsersButton" href="{% url 'Schedule:raddpatient' %}" style="position:fixed;top:260px;left:0px;z-index:60;">
-            </li>
-          </a>
-
-          <a href="{% url 'Schedule:rpatients' %}">
-            <li id="PatientProfiles" href="{% url 'Schedule:rpatients' %}" style="position:fixed;top:300px;left:0px;z-index:60;">
-            </li>
-          </a>
       </ul>
+
     </div>
     <div id="TopMenu" class="TopMenu">
       <a class="CurrentUser"> User:Receptionist</a>
       <div id="SettingsMenu">
         <ul>
-          <li><img id="HelpPicture" src="{% static 'Schedule/images/HelpSymbol.jpg' %}"><a id="Help" href="#Lock">Help</a></li>
-          <li><img id="SettingsPicture" src="{% static 'Schedule/images/settings.jpg' %}"><a id="Settings" href="#Settings">Settings</a></li>
-          <li><img id="LogOutPicture" src="{% static 'Schedule/images/logoutSymbol.jpg' %}"> <a id="LogOut" href="#Log Out">Log Out</a></li>
-          <li><img id="LockPicture" src="{% static 'Schedule/images/lockSymbol.jpg' %}"><a id="Lock" href="#Lock">Lock</a></li>
+          <li><img id="HelpPicture" src="Images/HelpSymbol.jpg"><a id="Help" href="#Lock">Help</a></li> 
+          <li><img id="SettingsPicture" src="Images/settings.jpg"><a id="Settings" href="#Settings">Settings</a></li>
+          <li><img id="LogOutPicture" src="Images/logoutSymbol.jpg"> <a id="LogOut" href="#Log Out">Log Out</a></li>
+          <li><img id="LockPicture" src="Images/lockSymbol.jpg"><a id="Lock" href="#Lock">Lock</a></li> 
         </ul>
       </div>
     </div>
     <div  class="bottomMenu">
-      <button id="ReportList">
-        <img src="{% static 'Schedule/images/triangle.jpg' %}" style="height:12px;width:12px;position:absolute;top:16px;right:80px">
-        Appointment Remainders
-      </button>
+      <a id="AddUsers" href="Add Users" style="position:absolute; top:32px; left:120px;">Appointments List</a>
     </div>
-    <input type="text" id="SearchBar" onkeyup="myFunction()" placeholder="Search for appointments.." title="Type in a name">
-<div class="bootstrap-iso" style="position:absolute;top:23%;left:70%;z-index:50;height:0;width:350px;">
+    <div class="bootstrap-iso" style="position:absolute;top:23%;left:70%;z-index:50;height:0;width:350px;">
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-6 col-sm-6 col-xs-12">
@@ -77,7 +70,7 @@
         </div>
       </div>
     </div>
-<div class="bootstrap-iso" style="position:absolute;top:23%;left:80%;z-index:50;height:0;width:400px;">
+    <div class="bootstrap-iso" style="position:absolute;top:23%;left:80%;z-index:50;height:0;width:400px;">
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-6 col-sm-6 col-xs-12">
@@ -101,6 +94,7 @@
     <buton class ="AddButton" style="position:absolute;top:23%;right:3%;z-index:40;">
       Apply
     </buton>
+    <input type="text" id="SearchBar" onkeyup="myFunction()" placeholder="Search for patients.." title="Type in a name">
     <select class="FilterList">
       <option disabled selected>Select access....</option>
       <option value="Most Recent Appointments">Most Recent</option>
@@ -110,11 +104,15 @@
     </select>
     <table border="0" class="UserTable">
       <tr>
-        <th align="left" width="10%" id="AptID">APPOINTMENT ID</th>
-        <th align="left" width="10%" id="PatientID">PATIENT ID</th>
-        <th align="left" width="30%" id="PractitionerName">Practitioner Name</th> 
-        <th align="left" width="10%" id="ApptDate">APPT. DATE</th>
-        <th align="left" id="Reason">REASON FOR VISIT</th>
+        <th align="center" id="AptID" width="8%">First</th>
+        <th align="left" id="PatientID" width="10%">LastName</th>
+        <th align="left" id="EmployeeID" width="8%">DOB</th> 
+        <th align="left" id="CheckIn" width=
+            "9%">CHECK IN TIME</th>
+        <th align="left" id="CheckOut" width="9%">CHECK OUT TIME</th>
+        <th align="left" id="AppStart" width=
+            "9%">APP. START</th>
+        <th align="left" id="AppEnd">APP. END</th>
       </tr>
       <tr>
       </tr>
