@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <link rel= "stylesheet" type="text/css" href="PatientList.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+  </head>
+  <body style="background-color:#white">
+
+    <div id="mySidenav" >
+
+    </div>
+    <div class="buttonsMenu">
+      <ul>
+        <a href="Home-Receptionist.html">
+          <li id="Home" href="home" style="position:fixed;top:140px; left:0px; z-index:60;">
+          </li>
+        </a>
+        <a href="ReportPage-Receptionist.html">
+          <li id="ReportsButton" href="Reports" style="position:fixed;top:180px; left:0px; z-index:60;">
+          </li>
+        </a>
+        <li id="ScheduleButton" href="Reports" style="position:fixed;top:220px;left:0px;z-index:60;">
+        </li>
+        <a href="AddUsers-Receptionist.html">
+          <li id="AddUsersButton" href="Reports" style="position:fixed;top:260px;left:0px;z-index:60;">
+          </li>
+        </a>
+        <a href="PatientProfiles.html">
+          <li id="PatientProfiles" href="Reports" style="position:fixed;top:300px;left:0px;z-index:60;">
+          </li>
+        </a>
+      </ul>
+
+    </div>
+    <div id="TopMenu" class="TopMenu">
+      <a class="CurrentUser"> User:Administrator</a>
+      <div id="SettingsMenu">
+        <ul>
+          <li><img id="HelpPicture" src="Images/HelpSymbol.jpg"><a id="Help" href="#Lock">Help</a></li> 
+          <li><img id="SettingsPicture" src="Images/settings.jpg"><a id="Settings" href="#Settings">Settings</a></li>
+          <li><img id="LogOutPicture" src="Images/logoutSymbol.jpg"> <a id="LogOut" href="#Log Out">Log Out</a></li>
+          <li><img id="LockPicture" src="Images/lockSymbol.jpg"><a id="Lock" href="#Lock">Lock</a></li> 
+        </ul>
+      </div>
+    </div>
+    <div  class="bottomMenu">
+      <a id="AddUsers" href="Add Users" style="position:absolute; top:32px; left:120px;">Patient Profiles</a>
+    </div>
+    <div class="FilterMenu">
+      <input type="text" id="SearchBar" onkeyup="myFunction()" placeholder="Search for patients.." title="Type in a name">
+      <buton class ="RecentButton" style="position:absolute;top:21%;left:37%;z-index:40;">
+        Recent 
+      </buton>
+      <buton class ="ScheduledButton" style="position:absolute;top:21%;left:30%;z-index:40;">
+        Scheduled 
+      </buton>
+      <buton class ="ScheduledButton" style="position:absolute;top:21%;left:30%;z-index:40;">
+        Scheduled 
+      </buton>
+      <buton class ="AddPatient" style="position:absolute;top:21%;right:10%;z-index:40;">
+        Apply 
+      </buton>
+    </div>
+    <div classs="ContextBrowser">
+      <table border="0" class="UserTable">
+        <tr>
+          <th align="center" id="date" width="12%">First</th>
+          <th align="left" id="Time" width="15%">LastName</th>
+          <th align="left" id="PatientsName" width="30%">DOB</th>
+          <th align="left"id="Pratitioner" width="30%">Contact Info</th>
+          <th align="left"id="Pratitioner" width="30%">Accessed</th>
+        </tr>
+      </table>
+    </div>
+  </body>
+  <script >
+  function Schedule
+  
+  
+  </script>
+</html>
