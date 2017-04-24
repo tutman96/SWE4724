@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7d78c31-2eef-4995-b691-900b7f0b288f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Accounts/views.py" afterPath="$PROJECT_DIR$/Accounts/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Schedule/static/Schedule/AddUsers.css" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/AddUsers.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Schedule/static/Schedule/HomeAdministrator.css" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/HomeAdministrator.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Schedule/static/Schedule/HomeStyle.css" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/HomeStyle.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Schedule/static/Schedule/PatientList.css" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/PatientList.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Schedule/static/Schedule/Report.css" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/Report.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Schedule/static/Schedule/style.css" afterPath="$PROJECT_DIR$/Schedule/static/Schedule/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Schedule/models.py" afterPath="$PROJECT_DIR$/Schedule/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Schedule/templates/Schedule/PatientProfiles-Receptionist.html" afterPath="$PROJECT_DIR$/Schedule/templates/Schedule/PatientProfiles-Receptionist.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Schedule/views.py" afterPath="$PROJECT_DIR$/Schedule/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Schedule/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="113" column="36" lean-forward="true" selection-start-line="113" selection-start-column="36" selection-end-line="113" selection-end-column="36" />
+            <state relative-caret-position="312">
+              <caret line="112" column="27" lean-forward="true" selection-start-line="112" selection-start-column="27" selection-end-line="112" selection-end-column="27" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -48,11 +42,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PatientProfiles-Receptionist.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Schedule/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PatientProfiles-Receptionist.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Schedule/templates/Schedule/PatientProfiles-Receptionist.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="88" column="11" lean-forward="true" selection-start-line="88" selection-start-column="11" selection-end-line="88" selection-end-column="11" />
+            <state relative-caret-position="266">
+              <caret line="87" column="59" lean-forward="true" selection-start-line="87" selection-start-column="59" selection-end-line="87" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -90,9 +94,10 @@
         <option value="$PROJECT_DIR$/Schedule/static/Schedule/PatientList.css" />
         <option value="$PROJECT_DIR$/Schedule/static/Schedule/HomeAdministrator.css" />
         <option value="$PROJECT_DIR$/Schedule/static/Schedule/AddUsers.css" />
-        <option value="$PROJECT_DIR$/Schedule/templates/Schedule/PatientProfiles-Receptionist.html" />
         <option value="$PROJECT_DIR$/Accounts/views.py" />
+        <option value="$PROJECT_DIR$/Schedule/models.py" />
         <option value="$PROJECT_DIR$/Schedule/views.py" />
+        <option value="$PROJECT_DIR$/Schedule/templates/Schedule/PatientProfiles-Receptionist.html" />
       </list>
     </option>
   </component>
@@ -105,7 +110,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-1" />
     <option name="y" value="27" />
-    <option name="width" value="642" />
+    <option name="width" value="1282" />
     <option name="height" value="774" />
   </component>
   <component name="ProjectView">
@@ -458,10 +463,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="27" width="642" height="774" extended-state="4" />
+    <frame x="-1" y="27" width="1282" height="774" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2734375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20859376" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -557,7 +562,7 @@
         <state relative-caret-position="1780">
           <caret line="89" column="28" lean-forward="false" selection-start-line="89" selection-start-column="28" selection-end-line="89" selection-end-column="28" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -574,7 +579,7 @@
         <state relative-caret-position="1380">
           <caret line="69" column="22" lean-forward="false" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="22" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -598,7 +603,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -630,16 +635,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Schedule/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -842,31 +837,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Schedule/templates/Schedule/PatientProfiles-Receptionist.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="88" column="11" lean-forward="true" selection-start-line="88" selection-start-column="11" selection-end-line="88" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Accounts/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="80" column="23" lean-forward="true" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Schedule/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Schedule/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="113" column="36" lean-forward="true" selection-start-line="113" selection-start-column="36" selection-end-line="113" selection-end-column="36" />
+        <state relative-caret-position="312">
+          <caret line="112" column="27" lean-forward="true" selection-start-line="112" selection-start-column="27" selection-end-line="112" selection-end-column="27" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Schedule/templates/Schedule/PatientProfiles-Receptionist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="87" column="59" lean-forward="true" selection-start-line="87" selection-start-column="59" selection-end-line="87" selection-end-column="59" />
+          <folding />
         </state>
       </provider>
     </entry>

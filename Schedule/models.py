@@ -31,7 +31,7 @@ class Diagnoses(models.Model):
 
 
 class Patient(models.Model):
-    patientID = models.PositiveIntegerField(primary_key=True)
+    patientID = models.AutoField(primary_key=True)
     firstName = models.CharField(max_length=100)
     lastName = models.CharField(max_length=100)
     middleI = models.CharField(max_length=1, null=True)
