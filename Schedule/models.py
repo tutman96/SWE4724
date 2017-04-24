@@ -7,7 +7,6 @@ from django.core.urlresolvers import reverse
 
 class Schedule(models.Model):
     scheduleID = models.AutoField(primary_key=True)
-    dayOfWeek = models.CharField(max_length=30)
     startTime = models.DateTimeField()
     endTime = models.DateTimeField()
     employeeID = models.ForeignKey(Employee)
