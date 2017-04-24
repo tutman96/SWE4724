@@ -1,8 +1,5 @@
 from django.views import generic
-from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
-from django.views.generic import View
-from django.http import Http404
+from .models import Patient
 
 
 class ReceptionistView(generic.ListView):
@@ -114,7 +111,7 @@ class ReceptionistPatientsView(generic.ListView):
     template_name = 'Schedule/PatientProfiles-Receptionist.html'
 
     def get_queryset(self):
-        return None
+        return Patient.objects.all()
 
 
 class AdminRegister(generic.ListView):

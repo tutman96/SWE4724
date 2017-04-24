@@ -73,23 +73,23 @@ class LoginAccess(View):
             Http404("Access Level Error Occured ")
 
 
-
-def validateLogin(request):
-    email = request.GET.get('email', None)
-    password = request.GET.get('password', None)
-    try:
-        employee = Employee.objects.get(employee__email=email)
-    except Employee.DoesNotExist:
-        employee = None
-    else:
-        employee = None
-
-    if employee:
-        if password == employee.password:
-            redirect(LoginAccess, employee)
+class validateLogin:
+    def get(self, request):
+        email = request.GET.get('email', None)
+        password = request.GET.get('password', None)
+        try:
+            employee = Employee.objects.get(employee__email=email)
+        except Employee.DoesNotExist:
+            employee = None
         else:
-            Http404("as planned")
-    Http404("No user")
+            employee = None
+
+        if employee:
+            if password == employee.password:
+                redirect(LoginAccess, employee)
+            else:
+                Http404("as planned")
+        Http404("No user")
 
 
 

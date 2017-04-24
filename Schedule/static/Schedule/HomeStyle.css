@@ -1,3 +1,5 @@
+{% load staticfiles %}
+
 #mySidenav {
   height: 100%;
   width: 100px;
@@ -13,14 +15,14 @@
 #Home{
   padding: 20px 50px;
   transition: 0.3s;
-  background-image:url("Images/HomeSymbolBlue.jpg");
+  background-image:url("images/HomeSymbolBlue.jpg");
   background-size: 100px;
   background-repeat: no-repeat;
   z-index: 60;
 }
 .buttonsMenu:hover #Home{
   padding: 20px 50px;
-  background-image: url("Images/HomeSymbolBlue.jpg");
+  background-image: url("images/HomeSymbolBlue.jpg");
   background-size:100px;
   background-repeat: no-repeat;
   z-index: 60;
@@ -28,14 +30,14 @@
 #ScheduleButton{
   padding: 20px 50px;
   transition: 0.3s;
-  background-image:url("Images/SchedulePatientsBlack.jpg");
+  background-image:url("images/SchedulePatientsBlack.jpg");
   background-size: 100px;
   background-repeat: no-repeat;
   z-index: 60;
 }
 #ScheduleButton:hover{
   padding: 20px 50px;
-  background-image: url("Images/SchedulePatientsBlue.jpg");
+  background-image: url("images/SchedulePatientsBlue.jpg");
   background-size:100px;
   background-repeat: no-repeat;
   z-index: 60;
@@ -43,14 +45,14 @@
 #ReportsButton{
   padding: 20px 50px;
   transition: 0.3s;
-  background-image:url("Images/ReportsSymbolBlack.jpg");
+  background-image:url("images/ReportsSymbolBlack.jpg");
   background-size: 100px;
   background-repeat: no-repeat;
   z-index: 60;
 }
 #ReportsButton:hover{
   padding: 20px 50px;
-  background-image: url("Images/ReportsSymbolBlue.jpg");
+  background-image: url("images/ReportsSymbolBlue.jpg");
   background-size:100px;
   background-repeat: no-repeat;
   z-index: 60;
@@ -66,14 +68,14 @@
 #AddUsersButton{
   padding: 20px 50px;
   transition: 0.3s;
-  background-image:url("Images/AddUsersBlack.jpg");
+  background-image:url("images/AddUsersBlack.jpg");
   background-size: 100px;
   background-repeat: no-repeat;
   z-index: 60;
 }
 #AddUsersButton:hover{
   padding: 20px 50px;
-  background-image: url("Images/AddUsersWhite.jpg");
+  background-image: url("images/AddUsersWhite.jpg");
   background-size:100px;
   background-repeat: no-repeat;
   z-index: 60;
@@ -81,7 +83,7 @@
 #PatientProfiles{
   padding: 20px 50px;
   transition: 0.3s;
-  background-image:url("Images/PatientsBlack.jpg");
+  background-image:url("images/PatientsBlack.jpg");
   background-size: 100px;
   background-repeat: no-repeat;
   z-index: 60;
@@ -89,7 +91,7 @@
 #PatientProfiles:hover{
   padding: 20px 50px;
   transition: 0.3s;
-  background-image:url("Images/PatientsBlue.jpg");
+  background-image:url("images/PatientsBlue.jpg");
   background-size: 100px;
   background-repeat: no-repeat;
   z-index: 60;
@@ -270,7 +272,7 @@
   left:105px;
   z-index: 50;
   width:700px;
-  background-image:url("Images/SearchIcon-0100.png");
+  background-image:url("images/SearchIcon-0100.png");
   background-position: 675px;
   background-repeat: no-repeat;
   background-size: 25px;
@@ -290,7 +292,7 @@
 #ReceptionistButton{
   padding: 20px 50px;
   transition: 0.3s;
-  background-image:url("Images/ReceptionistNavigationBlack.jpg");
+  background-image:url("images/ReceptionistNavigationBlack.jpg");
   background-size: 100px;
   background-repeat: no-repeat;
   z-index: 60;
@@ -298,7 +300,7 @@
 #PratitionerButton{
   padding: 20px 50px;
   transition: 0.3s;
-  background-image:url("Images/Practitioner.jpg");
+  background-image:url("images/Practitioner.jpg");
   background-size: 100px;
   background-repeat: no-repeat;
   z-index: 60;
@@ -306,7 +308,7 @@
 #ReceptionistButton:hover{
   padding: 20px 50px;
   transition: 0.3s;
-  background-image:url("Images/ReceptionistNavigation.jpg");
+  background-image:url("images/ReceptionistNavigation.jpg");
   background-size: 100px;
   background-repeat: no-repeat;
   z-index: 60;
@@ -314,7 +316,7 @@
 #PratitionerButton:hover{
   padding: 20px 50px;
   transition: 0.3s;
-  background-image:url("Images/PractitionerBlue.jpg");
+  background-image:url("images/PractitionerBlue.jpg");
   background-size: 100px;
   background-repeat: no-repeat;
   z-index: 60;
@@ -322,7 +324,7 @@
 #AddUsersButton{
   padding: 20px 50px;
   transition: 0.3s;
-  background-image:url("Images/AddUsersBlack.jpg");
+  background-image:url("images/AddUsersBlack.jpg");
   background-size: 100px;
   background-repeat: no-repeat;
   z-index: 60;
@@ -330,7 +332,7 @@
 #AddUsersButton:hover{
   padding: 20px 50px;
   transition: 0.3s;
-  background-image:url("Images/AddUsersWhite.jpg");
+  background-image:url("images/AddUsersWhite.jpg");
   background-size: 100px;
   background-repeat: no-repeat;
   z-index: 60;

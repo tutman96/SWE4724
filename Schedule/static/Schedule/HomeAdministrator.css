@@ -13,14 +13,14 @@
 #Home{
   padding: 20px 50px;
   transition: 0.3s;
-  background-image:url("Images/HomeSymbolBlack.jpg");
+  background-image:url("images/HomeSymbolBlack.jpg");
   background-size: 100px;
   background-repeat: no-repeat;
   z-index: 60;
 }
 .buttonsMenu:hover #Home{
   padding: 20px 50px;
-  background-image: url("Images/HomeSymbolBlue.jpg");
+  background-image: url("images/HomeSymbolBlue.jpg");
   background-size:100px;
   background-repeat: no-repeat;
   z-index: 60;
@@ -28,7 +28,7 @@
 #Reports{
   padding: 20px 50px;
   transition: 0.3s;
-  background-image:url("Images/ReportsSymbolBlue.jpg");
+  background-image:url("images/ReportsSymbolBlue.jpg");
   background-size: 100px;
   background-repeat: no-repeat;
   z-index: 60;
@@ -201,7 +201,7 @@
   left:105px;
   z-index: 50;
   width:700px;
-  background-image:url("Images/SearchIcon-0100.png");
+  background-image:url("images/SearchIcon-0100.png");
   background-position: 675px;
   background-repeat: no-repeat;
   background-size: 25px;
