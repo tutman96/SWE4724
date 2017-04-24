@@ -2,6 +2,12 @@ from django.views import generic
 from .models import Patient
 
 
+class ReceptionistSchedule(generic.ListView):
+    template_name = 'Schedule/Schedule.html'
+
+    def get_queryset(self):
+        return None
+        
 class ReceptionistView(generic.ListView):
     template_name = 'Schedule/AppointmentList-Receptionist.html'
 
