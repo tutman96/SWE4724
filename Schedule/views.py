@@ -115,6 +115,7 @@ class ReceptionistPatientsView(generic.ListView):
         return patients
 
 
+
 class AdminRegister(generic.ListView):
     template_name = 'Schedule/AddUser-Adminstrator.html'
 
