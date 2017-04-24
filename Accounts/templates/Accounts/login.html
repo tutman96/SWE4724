@@ -1,47 +1,52 @@
-<!DOCTYPE html>
-{% load staticfiles %}
+<!DOCTYPE html> {% load staticfiles %}
 <html>
+
 <head>
-    <title>{%block title %}AMOMS{% endblock %}</title>
+  <title>{%block title %}AMOMS{% endblock %}</title>
 
   <link rel="stylesheet" type="text/css" href="{% static 'Accounts/Login.css' %}">
   <link type="text/javscript" src="Slide.js">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  {% csrf_token %}
 </head>
+
 <body>
 
 
-<div id="Header">
-  <img src="{% static 'Accounts/images/SymbolLabel.jpg' %}" class="HomeSymbol">
-</div>
-
-<div class="Features">
-  <img class="mySlides" src="{% static 'Accounts/images/SchedulePatients.jpg' %}" style="width:70%">
-  <img class="mySlides" src="{% static 'Accounts/images/PrescriptionPatients.jpg' %}" style="width:70%">
-  <img class="mySlides" src="{% static 'Accounts/images/PrescriptionEditor.jpg' %}" style="width:70%">
-  <button style="position:absolute;top:40%;left:-5%;" class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-  <button style="position:absolute;top:40%;left:70%;" class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+  <div id="Header">
+    <img src="{% static 'Accounts/images/SymbolLabel.jpg' %}" class="HomeSymbol">
   </div>
 
-<div class="LogScreen">
-  <a style="position:absolute;top:10%;left:45%;color:black;font-weight:bold;">Log In</a>
-  <a id="subHeader" style="position: absolute;                   top:25%;right:10%;">Forgot your Login Email?</a>
-  <a id="subHeader" style="position: absolute;                   top:40%;right:10%;">Forgot your Password?</a>
-  <label class="Emailtype">
+  <div class="Features">
+    <img class="mySlides" src="{% static 'Accounts/images/SchedulePatients.jpg' %}" style="width:70%">
+    <img class="mySlides" src="{% static 'Accounts/images/PrescriptionPatients.jpg' %}" style="width:70%">
+    <img class="mySlides" src="{% static 'Accounts/images/PrescriptionEditor.jpg' %}" style="width:70%">
+    <button style="position:absolute;top:40%;left:-5%;" class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+    <button style="position:absolute;top:40%;left:70%;" class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+  </div>
+
+  <div class="LogScreen">
+    <a style="position:absolute;top:10%;left:45%;color:black;font-weight:bold;">Log In</a>
+    <a id="subHeader" style="position: absolute;                   top:25%;right:10%;">Forgot your Login Email?</a>
+    <a id="subHeader" style="position: absolute;                   top:40%;right:10%;">Forgot your Password?</a>
+    <label class="Emailtype">
     Email<br>
     <input  type="text" id="email">
   </label>
-  <label class="Passwordtype">
-    Password<br>
-    <input  type="password" id="password">
-  </label>
-  <button class="LoginButton" type='submit' onclick="saveinfo">
+    <label class="Passwordtype">
+      Password<br>
+      <input  type="password" id="password">
+    </label>
+    <br>
+    <span id="error" style="color:red"></span>
+    <button class="LoginButton" type='submit' onclick="saveinfo()">
     LOGIN
   </button>
-</div>
+  </div>
 
-<div class="HelpBar">
-  <label class="HelpBarButtons">
+  <div class="HelpBar">
+    <label class="HelpBarButtons">
   <a id="date" href="date" style="text-decoration:none">@2017 software system name |</a>
     <a id="sitemap" href="style" style="text-decoration:none">Site Map |</a>
     <a id="sitemap" href="style" style="text-decoration:none">Terms |</a>
@@ -50,41 +55,53 @@
   </label>
   </div>
 
-<script>
-  var slideIndex = 1;
-  showDivs(slideIndex);
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
 
-  function plusDivs(n) {
-    showDivs(slideIndex += n);
-  }
-
-  function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    if (n > x.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = x.length}
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
     }
-    x[slideIndex-1].style.display = "block";
-  }
 
-  function saveinfo() {
-      var user = new FormData();
-      user.append('email', document.getElementById('email'));
-      user.append('password', document.getElementById('password'));
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = x.length }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex - 1].style.display = "block";
+    }
+
+    function saveinfo() {
       var url = "{% url 'Accounts:validate' %}";
+      var csrftoken = $("[name=csrfmiddlewaretoken]").val();
 
-      $.ajax({
-          method: 'POST',
-          url: url,
-          data: user.serialize(),
-          dataType: 'json'
+      $.ajaxSetup({
+        beforeSend: function (xhr, settings) {
+          xhr.setRequestHeader("X-CSRFToken", csrftoken);
+        }
       });
-
-
-  }
-
+      
+      $("#error").hide();
+      $.ajax({
+        method: 'POST',
+        url: url,
+        data: {
+          email: $('#email').val(),
+          password: $('#password').val()
+        },
+        dataType: 'json',
+        success: function (response) {
+          
+        },
+        error: function (a,b,statusText) {
+          $("#error").show().text(a.responseText)
+        }
+      })
+    }
   </script>
 </body>
+
 </html>

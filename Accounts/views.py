@@ -6,6 +6,7 @@ from django.http import Http404
 from .forms import UserForm
 from models import Employee
 from Schedule import views as Schedviews
+from django.http import HttpResponseBadRequest
 
 userAccess = 'R'
 
@@ -73,25 +74,21 @@ class LoginAccess(View):
             Http404("Access Level Error Occured ")
 
 
-class validateLogin:
-    def get(self, request):
-        email = request.GET.get('email', None)
-        password = request.GET.get('password', None)
-        try:
-            employee = Employee.objects.get(employee__email=email)
-        except Employee.DoesNotExist:
-            employee = None
-        else:
-            employee = None
-
-        if employee:
-            if password == employee.password:
-                redirect(LoginAccess, employee)
-            else:
-                Http404("as planned")
-        Http404("No user")
-
-
-
-
-
+def validateLogin(request):
+    email = request.POST.get('email', None)
+    password = request.POST.get('password', None)
+    print email
+    print password
+    try:
+        employee = Employee.objects.get(username=email)
+    except Employee.DoesNotExist:
+        return HttpResponseBadRequest("Username or password is incorrect");
+    # else:
+        # employee = None
+    
+    print employee
+    
+    if password == employee.password:
+        return redirect(LoginAccess, employee)
+    else:
+        return HttpResponseBadRequest("Username or password is incorrect");
