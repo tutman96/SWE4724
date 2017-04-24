@@ -6,15 +6,15 @@ from django.core.urlresolvers import reverse
 
 
 class Schedule(models.Model):
-    scheduleID = models.PositiveIntegerField(primary_key=True)
-    dayOfWeek = models.DateField()
+    scheduleID = models.AutoField(primary_key=True)
+    dayOfWeek = models.CharField(max_length=30)
     startTime = models.DateTimeField()
     endTime = models.DateTimeField()
     employeeID = models.ForeignKey(Employee)
 
 
 class Prescription(models.Model):
-    prescriptionID = models.PositiveIntegerField(primary_key=True)
+    prescriptionID = models.AutoField(primary_key=True)
     prescriptionTxt = models.TextField()
     printTime = models.DateTimeField()
     employeeID = models.ForeignKey(Employee)
@@ -23,7 +23,7 @@ class Prescription(models.Model):
 
 
 class Diagnoses(models.Model):
-    diagnosesID = models.PositiveIntegerField(primary_key=True)
+    diagnosesID = models.AutoField(primary_key=True)
     diagnosesName = models.TextField()
     diagnosesDateBegin = models.DateTimeField()
     diagnosesDateEND = models.DateTimeField()
@@ -31,7 +31,7 @@ class Diagnoses(models.Model):
 
 
 class Patient(models.Model):
-    patientID = models.PositiveIntegerField(primary_key=True)
+    patientID = models.AutoField(primary_key=True)
     firstName = models.CharField(max_length=100)
     lastName = models.CharField(max_length=100)
     middleI = models.CharField(max_length=1, null=True)
@@ -55,7 +55,7 @@ class Patient(models.Model):
 
 
 class Notes(models.Model):
-    noteID = models.PositiveIntegerField(primary_key=True)
+    noteID = models.AutoField(primary_key=True)
     patientID = models.ForeignKey(Patient, on_delete=models.CASCADE)
     noteText = models.TextField(max_length=1000)
 
@@ -64,7 +64,7 @@ class Notes(models.Model):
 
 
 class Appointment(models.Model):
-    appointmentID = models.PositiveIntegerField(primary_key=True)
+    appointmentID = models.AutoField(primary_key=True)
     patientID = models.ForeignKey(Patient)
     employeeID = models.ForeignKey(Employee)
     scheduledDate = models.DateField()
