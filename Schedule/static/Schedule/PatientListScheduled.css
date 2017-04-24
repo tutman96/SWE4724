@@ -1,0 +1,426 @@
+#mySidenav {
+  height: 100%;
+  width: 100px;
+  position: fixed;
+  z-index: 30;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+#Home{
+  padding: 20px 50px;
+  background-image: url("Images/HomeSymbolBlack.jpg");
+  background-size:100px;
+  background-repeat: no-repeat;
+  z-index: 60;
+}
+#Home:hover{
+  padding: 20px 50px;
+  background-image: url("Images/HomeSymbolBlue.jpg");
+  background-size:100px;
+  background-repeat: no-repeat;
+  z-index: 60;
+}
+#ReceptionistButton{
+  padding: 20px 50px;
+  transition: 0.3s;
+  background-image:url("Images/ReceptionistNavigationBlack.jpg");
+  background-size: 100px;
+  background-repeat: no-repeat;
+  z-index: 60;
+}
+#ReportsButton{
+  padding: 20px 50px;
+  transition: 0.3s;
+  background-image:url("Images/ReportsSymbolBlack.jpg");
+  background-size: 100px;
+  background-repeat: no-repeat;
+  z-index: 60;
+}
+#ReportsButton:hover{
+  padding: 20px 50px;
+  transition: 0.3s;
+  background-image:url("Images/ReportsSymbolBlue.jpg");
+  background-size: 100px;
+  background-repeat: no-repeat;
+  z-index: 60;
+}
+#PratitionerButton{
+  padding: 20px 50px;
+  transition: 0.3s;
+  background-image:url("Images/Practitioner.jpg");
+  background-size: 100px;
+  background-repeat: no-repeat;
+  z-index: 60;
+}
+#ReceptionistButton:hover{
+  padding: 20px 50px;
+  transition: 0.3s;
+  background-image:url("Images/ReceptionistNavigation.jpg");
+  background-size: 100px;
+  background-repeat: no-repeat;
+  z-index: 60;
+}
+#PratitionerButton:hover{
+  padding: 20px 50px;
+  transition: 0.3s;
+  background-image:url("Images/PractitionerBlue.jpg");
+  background-size: 100px;
+  background-repeat: no-repeat;
+  z-index: 60;
+}
+#ScheduleButton{
+  padding: 20px 50px;
+  transition: 0.3s;
+  background-image:url("Images/SchedulePatientsBlack.jpg");
+  background-size: 100px;
+  background-repeat: no-repeat;
+  z-index: 60;
+}
+#ScheduleButton:hover{
+  padding: 20px 50px;
+  transition: 0.3s;
+  background-image:url("Images/SchedulePatientsBlue.jpg");
+  background-size: 100px;
+  background-repeat: no-repeat;
+  z-index: 60;
+}
+#AddUsersButton{
+  padding: 20px 50px;
+  transition: 0.3s;
+  background-image:url("Images/AddUsersBlack.jpg");
+  background-size: 100px;
+  background-repeat: no-repeat;
+  z-index: 60;
+}
+#AddUsersButton:hover{
+  padding: 20px 50px;
+  transition: 0.3s;
+  background-image:url("Images/AddUsersWhite.jpg");
+  background-size: 100px;
+  background-repeat: no-repeat;
+  z-index: 60;
+}
+#PatientList{
+  padding: 20px 50px;
+  transition: 0.3s;
+  background-image:url("Images/PatientProfile.jpg");
+  background-size: 100px;
+  background-repeat: no-repeat;
+  z-index: 60;
+}
+#Reports{
+  padding: 20px 50px;
+  transition: 0.3s;
+  background-image:url("Images/PatientsBlack.jpg");
+  background-size: 100px;
+  background-repeat: no-repeat;
+  z-index: 60;
+}
+#PatientProfiles{
+  padding: 20px 50px;
+  transition: 0.3s;
+  background-image:url("Images/PatientsBlue.jpg");
+  background-size: 100px;
+  background-repeat: no-repeat;
+  z-index: 60;
+}
+
+#AddUsers{
+  font-family: Verdana;
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  z-index: 25;
+}
+#HeadingText{
+  z-index:20;
+  color:black;
+  text-decoration: none;
+  font-family: Verdana;
+  font-size:12px;
+
+}
+.TopMenu{
+  height: 80px;
+  padding-left: 250px;
+  /* overflow: hidden;*/
+  background-color: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 10;
+}
+.bottomMenu{
+  position:fixed;
+  background-color:#14a4eb;
+  height:13%;
+  min-width: 100%;
+  top:50px;
+  right:1px;
+}
+#SettingsMenu ul{
+  font-family: Verdana;
+  text-decoration: none;
+  color:#8c9a9d;
+  position:absolute;
+  top:-20%;
+  left:57%;
+}
+#SettingsMenu ul li{
+  list-style-type: none;
+  display: inline;
+  margin: 25px;
+}
+#Settings{
+  font-family: Verdana;
+  text-decoration: none;
+  color:white;
+  font-size:13px;
+}
+#LogOut{
+  font-family: Verdana;
+  text-decoration: none;
+  color:white;
+  font-size:13px;
+}
+#Lock{
+  font-family: Verdana;
+  text-decoration: none;
+  color:white;
+  font-size:13px;
+}
+#Help{
+  font-family: Verdana;
+  text-decoration: none;
+  color:white;
+  font-size:13px;
+}
+#HelpPicture{
+  height:30px;
+  width:30px;
+  position:absolute;
+  top:-7%;
+  left:35px;
+}
+#SettingsPicture{
+  height:27px;
+  width:27px;
+  position:absolute;
+  top:4%;
+  left:120px;
+}
+#LockPicture{
+  height:20px;
+  width:20px;
+  position:absolute;
+  top:13%;
+  left:335px;
+}
+#LogOutPicture{
+  height:22px;
+  width:22px;
+  position:absolute;
+  top:13%;
+  left:233px;
+}
+#callList{
+  position:absolute;
+  top:120%;
+  left:120px;
+}
+.ShowReport{
+  font-family:Verdana;
+  font-size:13px;
+  border:none;
+  text-align: center;
+  color:white;
+  background-color:#14a4eb;
+  padding: 5px 120px;
+}
+.ShowReport:hover{
+  opacity: 0.9;
+}
+.ShowReport:action{
+  background-color: #ff9326;
+  box-shadow: 0 1px #666;
+  transform: translateY(1px);
+}
+.ButtonsAppointment{
+  font-family:Verdana;
+  font-size:13px;
+  border:none;
+  text-align: center;
+  color:white;
+  background-color:#14a4eb;
+  padding: 5px 120px;
+}
+#AppointmentList{
+  position:absolute;
+  top:115px;
+  left:510px;
+}
+#MissedAppointmentList{
+  position:absolute;
+  top:115px;
+  left:900px;
+}
+#ReportList{
+  position:absolute;
+  top:2px;
+  left:105px;
+  z-index: 5;
+  background-color:#333;
+  color:#14a4eb;
+  border:none;
+  font-family: Verdana;
+}
+.UserTable{
+  position:absolute;
+  top:190px;
+  font-family: Verdana;
+  font-size:11px;
+  left:100px;
+  width:100%;
+  border-collapse: collapse;
+  background:#d6d6d6;
+}
+.UserTable th{
+  font-size:9px;
+  height:20px
+}
+.UserTable td{
+  height:30px;
+  border-bottom: 1px solid #ddd;
+}
+#SearchBar{
+  position:absolute;
+  top:150px;
+  left:105px;
+  z-index: 50;
+  width:300px;
+  background-image:url("Images/SearchIcon-0100.png");
+  background-position: 280px;
+  background-repeat: no-repeat;
+  background-size: 25px;
+}
+.FilterList{
+  position:absolute;
+  top:23%;
+  left:60%;
+  z-index: 40;
+}
+.AddButton{
+  font-family:Verdana;
+  font-size:13px;
+  border:none;
+  text-align: center;
+  color:white;
+  background-color:#14a4eb;
+  padding: 5px 15px;
+}
+.AddButton:hover{
+  opacity: 0.9;
+}
+.CurrentUser{
+  font-family: Verdana;
+  font-size:17;
+  color:white;
+}
+#AppointmentReminders{
+  position:absolute;
+  top:120%;
+  left:900px;
+}
+#HistoryOfAppointments{
+  position:absolute;
+  top:400%;
+  left:120px;
+}
+.PatientHeader{
+  font-family: Verdana;
+  text-decoration:none;
+  color:#14a4eb;
+  font-size:25px;
+  position:absolute;
+  left:30%;
+}
+.Submit{
+  font-family:Verdana;
+  font-size:13px;
+  border:none;
+  text-align: center;
+  color:white;
+  background-color:#14a4eb;
+  padding: 5px 15px;
+}
+.Submit:hover{
+  opacity: 0.9;
+}
+.emb-view-fix-colum{
+  position:relative;
+  top:180px;
+  left:130px;
+}
+.ScheduledButton{
+  font-family:Verdana;
+  font-size:13px;
+  border:none;
+  text-align: center;
+  color:white;
+  background-color:#14a4eb;
+  padding: 5px 15px;
+  border: 2px solid #555555;
+}
+.RecentButton{
+  font-family:Verdana;
+  font-size:13px;
+  border:none;
+  text-align: center;
+  color:grey;
+  background-color:white;
+  padding: 5px 15px;
+  border: 2px solid #555555;
+}
+.RecentButton:hover{
+  font-family:Verdana;
+  font-size:13px;
+  border:none;
+  text-align: center;
+  color:white;
+  background-color:#14a4eb;
+  padding: 5px 15px;
+  border: 2px solid #555555;
+}
+.AddPatient{
+  font-family:Verdana;
+  font-size:13px;
+  border:none;
+  text-align: center;
+  color:white;
+  background-color:;
+  padding: 5px 15px;
+  border: 2px solid #555555;
+
+}
+.AddPatient{
+  font-family:Verdana;
+  font-size:13px;
+  border:none;
+  text-align: center;
+  color:white;
+  background-color:#ff9326;
+  padding: 5px 15px;
+}
+.AddPatient:hover{
+  opacity: 0.9;
+}
+.AddPatient:active{
+  background-color: #ff9326;
+  box-shadow: 0 1px #666;
+  transform: translateY(1px);
+}

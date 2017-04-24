@@ -40,4 +40,5 @@ urlpatterns = [
 
     url(r'^receptionist/PatientsList/$', views.ReceptionistPatientsView.as_view(), name='rpatients'),
 
+    url(r'^receptionist/schedule/$', views.ReceptionistSchedule.as_view(), name='rschedule'),
 ]

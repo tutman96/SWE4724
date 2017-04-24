@@ -1,0 +1,150 @@
+<html>
+{% load staticfiles %}
+  <head>
+    <link rel= "stylesheet" type="text/css" href="{% static 'Schedule/Report.css' %}">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.3.0/fullcalendar.min.css" rel="stylesheet">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.3.0/fullcalendar.min.js"></script>
+
+    <style>
+		body {
+			margin-top:100px
+		}
+		
+		.fc h2 {
+			font-size: 150%
+		}
+	</style>
+  </head>
+  <body style="background-color:#white">
+    <div id="mySidenav" >
+    </div>
+    <div class="buttonsMenu">
+      <ul>
+        <a href="{% url 'Schedule:rhome' %}">
+          <li id="Home" href="{% url 'Schedule:rhome' %}" style="position:fixed;top:140px; left:0px; z-index:60;">
+          </li>
+        </a>
+
+        <a href="{% url 'Schedule:rreports' %}">
+          <li id="ReportsButton" href="{% url 'Schedule:rreports' %}" style="position:fixed;top:180px; left:0px; z-index:60;">
+          </li>
+        </a>
+
+        <a href="{% url 'Schedule:rschedule' %}">
+          <li id="ScheduleButton" href="{% url 'Schedule:rschedule' %}" style="position:fixed;top:220px;left:0px;z-index:60;">
+          </li>
+        </a>
+
+          <a href="{% url 'Schedule:raddpatient' %}">
+            <li id="AddUsersButton" href="{% url 'Schedule:raddpatient' %}" style="position:fixed;top:260px;left:0px;z-index:60;">
+            </li>
+          </a>
+
+          <a href="{% url 'Schedule:rpatients' %}">
+            <li id="PatientProfiles" href="{% url 'Schedule:rpatients' %}" style="position:fixed;top:300px;left:0px;z-index:60;">
+            </li>
+          </a>
+      </ul>
+
+    </div>
+
+    <div id="TopMenu" class="TopMenu">
+      <a class="CurrentUser"> User:Receptionist</a>
+      <div id="SettingsMenu">
+        <ul>
+          <li><img id="HelpPicture" src="{% static 'Schedule/images/HelpSymbol.jpg' %}"><a id="Help" href="#Lock">Help</a></li>
+          <li><img id="SettingsPicture" src="{% static 'Schedule/images/settings.jpg' %}"><a id="Settings" href="#Settings">Settings</a></li>
+          <li><img id="LogOutPicture" src="{% static 'Schedule/images/logoutSymbol.jpg' %}"> <a id="LogOut" href="#LogOut">Log Out</a></li>
+          <li><img id="LockPicture" src="{% static 'Schedule/images/lockSymbol.jpg' %}"><a id="Lock" href="#Lock">Lock</a></li>
+        </ul>
+      </div>
+    </div>
+
+      <div id="calendar" style="width:600px;margin: 0 auto;"></div>
+      <script>
+		$('#calendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,agendaWeek,agendaDay'
+			},
+			defaultDate: new Date(), //today
+			defaultView: 'agendaDay',
+			editable: false,
+			allDaySlot: false,
+			slotDuration: '00:30:00', //30 minutes
+			minTime: '08:00:00', //8 am
+			maxTime: '18:00:00', //6 pm
+			slotEventOverlap: false,
+			events: function (start, end, timezone, callback) {
+				//TODO dynamic
+				var events = [
+					{
+						employee: {
+							id: 123,
+							firstName: "Bob",
+							lastName: "Smith"
+						},
+						patient: {
+							id: 456,
+							firstName: "Sally",
+							middleInitial: "J",
+							lastName: "Sue"
+						},
+						start: moment(start).add(8, 'h').toObject(), //or JSON date format
+						end: moment(start).add(10, 'h').toObject(), //or JSON date format
+						color: "#C00",     //change based on appointment status
+						textColor: "white",//
+						url: "#" //link to appointment edit
+					},
+					{
+						title: 'Lunch',
+						start: moment(start).add(9, 'h').toObject(),
+						end: moment(start).add(11, 'h').toObject(),
+						textColor: "black"
+					}
+				]
+				callback(events)
+			},
+			eventRender: function (event, element) {
+				var e = $("<div>");
+
+				var timeSpan = $("<div>");
+				timeSpan.addClass("fc-time")
+				timeSpan.text(event.start.format('H:mm') + " - " + event.end.format('H:mm'))
+				e.append(timeSpan);
+
+				if (event.employee && event.patient) {
+					var link = $("<div>");
+						var employeeLink = $("<a>")
+						employeeLink.attr("href", "#employeeId=" + event.employee.id);
+						employeeLink.text(event.employee.firstName + " " + event.employee.lastName);
+						employeeLink.attr("style","color:white");
+					link.append(employeeLink)
+					
+						var patientLink = $("<a>")
+						patientLink.attr("href", "#patientId=" + event.patient.id);
+						patientLink.text(event.patient.firstName + " " + event.patient.middleInitial + ". " + event.patient.lastName);
+						patientLink.attr("style","color:white");
+					
+					link.append($("<span> seeing </span>"))
+					link.append(patientLink);
+					
+					e.append(link);
+				}
+				
+				return element.html(e[0].outerHTML)
+			}
+		});
+	</script>
+
+  </body>
+</html>
